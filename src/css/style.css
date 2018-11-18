@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
+
+.Tangerine{
+    font-family: 'Tangerine', cursive;
+}
+
+.bg { 
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body{
+    color: #333 !important
+}
