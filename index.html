@@ -37,20 +37,43 @@
         <div class="col-12 col-md-8 offset-md-2 my-5">
           <h1 class="text-white text-center display-4 Tangerine">Hank Liao</h1>
           <p class="text-white text-center lead">A noob programmer.</p>
-          <hr class="my-4">
-          <div class="col-12 text-center">
-            <a class="btn btn-outline-gray btn-lg"
+          <div class="row justify-content-center">
+            <a class="btn btn-md"
                href="https://github.com/hankliao87/" target="_blank"
                role="button">
-              <img src="src/img/fs-github.png" width="30rem">
+              <img src="src/img/github.svg" width="30rem">
+            </a>
+            <a class="btn btn-md"
+               href="https://www.linkedin.com/in/hung-ju-liao-581675196/" target="_blank"
+               role="button">
+              <img src="src/img/linkedin.svg" width="30rem">
+            </a>
+            <a role="button"class="btn btn-md" data-toggle="modal" data-target="#emailModal">
+              <img src="src/img/envelope.svg" width="30rem">
             </a>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body bg-dark text-white">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff">
+              <span aria-hidden="true">&times;</span>
+          </button>
+            <h5>My email</h5>
+            base64.decode('aGFua2xpYW84N0BnbWFpbC5jb20K')
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fixed-bottom text-muted text-right my-1">Photo Credit: <a href="https://unsplash.com/photos/0LU4vO5iFpM">Unsplash</a></div>
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="src/js/popper.min.js"></script>
     <script src="src/js/bootstrap.min.js"></script>
   </body>
-
 </html>
