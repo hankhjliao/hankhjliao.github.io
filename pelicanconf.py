@@ -7,7 +7,6 @@ SITENAME = u'Hank Liao\'s Blog'
 # SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
 LOGO_IMG = 'images/logo.png'
-REPO_NAME = 'hankliao87/blog'
 THEME = 'theme'
 PATH = 'content'
 
@@ -54,6 +53,10 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
 DRAFT_URL = 'posts/draft/{slug}/'
 DRAFT_SAVE_AS = 'posts/draft/{slug}/index.html'
+
+#DISQUS_SITENAME = ""
+#GOOGLE_ANALYTICS = ""
+UTTERANC_REPO_NAME = 'hankliao87/blog'
 
 ################################
 # Feed

@@ -76,10 +76,10 @@
             </a>
             {% endif %}
 
-            {% if REPO_NAME %}
+            {% if UTTERANC_REPO_NAME %}
             <div class="comments" id="comments">
                 <script src="https://utteranc.es/client.js"
-                        repo="{{REPO_NAME}}"
+                        repo="{{UTTERANC_REPO_NAME}}"
                         issue-term="title"
                         label="content"
                         theme="github-light"
@@ -88,6 +88,7 @@
                 </script>
             </div>
             {% endif %}
+
             {% if DISQUS_SITENAME %}
             <div class="comments">
                 <h3>Comments</h3>
