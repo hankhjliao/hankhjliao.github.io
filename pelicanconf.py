@@ -93,9 +93,22 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ["render_math", "tag_cloud", "better_codeblock_line_numbering", "pelican-encrypt-content", "tipue_search", "pelican-toc"]
 
 MARKDOWN = {
-    'extensions' : ['markdown.extensions.codehilite', 'markdown.extensions.extra', 'mdx_include', 'markdown.extensions.admonition'],
+    'extensions' : [
+        'markdown.extensions.admonition',
+        'markdown.extensions.codehilite',
+        'markdown.extensions.extra',
+        'markdown.extensions.nl2br',
+        'mdx_include',
+        'pymdownx.emoji',
+        'pymdownx.inlinehilite',
+        'pymdownx.keys',
+        'pymdownx.magiclink',
+        'pymdownx.mark',
+        'pymdownx.tabbed',
+    ],
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': 'False'},
+        "pymdownx.emoji": {"options": {"attributes": {"align": "absmiddle", "height": "20px", "width": "20px"},}},
     },
 }
 
