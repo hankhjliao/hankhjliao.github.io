@@ -90,7 +90,7 @@ SOCIAL = ()
 ################################
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ["render_math", "tag_cloud", "better_codeblock_line_numbering", "pelican-encrypt-content", "tipue_search", "pelican-toc"]
+PLUGINS = ["render_math", "tag_cloud", "better_codeblock_line_numbering", "pelican-encrypt-content", "tipue_search", "pelican-toc", "readtime"]
 
 MARKDOWN = {
     'extensions' : [

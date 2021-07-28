@@ -30,6 +30,9 @@
                         <a class="text-secondary" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
                         {% endfor %}
                         {% endif %}
+                        {% if article.readtime %}
+                        <div><b>Read in {{article.readtime.minutes}} min.</b></div>
+                        {% endif %}
                     </div>
                     <div class="card-text">
                         {{ article.content }}
@@ -103,6 +106,7 @@
                 </script>
             </div>
             {% endif %}
+
             {% if JUVIA_ID %}
             <h3>Comments</h3>
             <div id="comments"></div>
