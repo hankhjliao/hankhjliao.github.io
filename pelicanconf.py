@@ -25,6 +25,8 @@ DATE_FORMATS = {
     'en': ('%Y/%m/%d'),
 }
 
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.loopcontrols']}
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
@@ -98,7 +100,7 @@ MARKDOWN = {
 }
 
 TAG_CLOUD_STEPS = 4
-TAG_CLOUD_MAX_ITEMS = 50
+TAG_CLOUD_SIDEBAR_MAX_ITEMS = 15
 TAG_CLOUD_SORTING = "size"
 TAG_CLOUD_BADGE = True
 
