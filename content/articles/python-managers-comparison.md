@@ -131,7 +131,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 <!-- footnote -->
 [^pip_install]: Use system package manager (e.g. `apt`, `yum`) or `curl -sSL https://bootstrap.pypa.io/get-pip.py | python`
 [^conda_install]: https://docs.conda.io/en/latest/miniconda.html
-[^pipenv_install]: `pip install pipenv` or`curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python`
+[^pipenv_install]: `pip install pipenv` or `curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python`
 [^poetry_install]: `curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python`
 [^conda_import_pip]: `while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt`
 [^poetry_import_pip]: `cat requirements.txt | xargs poetry add`
