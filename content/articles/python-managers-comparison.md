@@ -59,8 +59,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 | Installation   | -                         | pip install virtualenv    | [^conda_install]          | [^pipenv_install]                | [^poetry_install]         |
 | Env Create     | python -m venv `env`      | virtualenv `env`          | conda create -p `env`     | pipenv --python `python-version` | poetry init               |
 | Env Activate   | source `env`/bin/activate | source `env`/bin/activate | conda activate ./`env`    | pipenv shell                     | poerty shell              |
-| Env Deactivate | deactivate                | deactivate                | conda deactivate          | ++ctrl+d++                           | ++ctrl+d++                    |
-| Env Remove     | Delete `env`              | Delete `env`              | conda env remove -p `env` | pipenv --rm                      | [^poetry_remove_env]      |
+| Env Deactivate | deactivate                | deactivate                | conda deactivate          | ++ctrl+d++                       | ++ctrl+d++                |
+| Env Remove     | Delete `env` folder       | Delete `env` folder       | conda env remove -p `env` | pipenv --rm                      | [^poetry_remove_env]      |
 | Env Run        | -                         | -                         | -                         | pipenv run python main.py        | poetry run python main.py |
 
 ## Manage python packages
