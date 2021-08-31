@@ -1,5 +1,5 @@
 ---
-Title: Python Mangers Comparison
+Title: Python Managers Comparison
 Date: 2021-8-2 11:20
 Category: Python
 Tags: Python, Comparison
