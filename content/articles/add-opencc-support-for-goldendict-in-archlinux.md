@@ -13,9 +13,7 @@ When you install goldendict using `yay`, you won't see the `Chinese Conversion` 
 
 <div class="text-center">
   <figure class="figure">
-    <a href="{attach}/images/add-opencc-support-for-goldendict-in-archlinux-option.png">
     <img src="{attach}/images/add-opencc-support-for-goldendict-in-archlinux-option.png" class="figure-img img-fluid rounded" alt="The transliteration option in goldendict with opencc support">
-    </a>
     <figcaption class="figure-caption text-center">The transliteration option in goldendict with opencc support.</figcaption>
   </figure>
 </div>

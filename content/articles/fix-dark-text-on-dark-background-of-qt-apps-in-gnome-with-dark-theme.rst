@@ -15,9 +15,7 @@ When we change the theme of the QT apps to the dark varient, the text of the int
 
    <div class="text-center">
    <figure class="figure">
-   <a href="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-1.png">
    <img src="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-1.png" class="figure-img img-fluid rounded" alt="Dark text on dark background (Goldendict)">
-   </a>
    <figcaption class="figure-caption text-center">Dark text on dark background (Goldendict)</figcaption>
    </figure>
    </div>
@@ -40,9 +38,7 @@ Solution
 
       <div class="text-center">
       <figure class="figure">
-      <a href="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-4.png">
       <img src="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-4.png" class="figure-img img-fluid rounded" alt="Select preferred dark theme">
-      </a>
       <figcaption class="figure-caption text-center">Select preferred dark theme</figcaption>
       </figure>
       </div>
@@ -53,9 +49,7 @@ Solution
 
       <div class="text-center">
       <figure class="figure">
-      <a href="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-3.png">
       <img src="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-3.png" class="figure-img img-fluid rounded" alt="Change kvantum to kvantum-dark">
-      </a>
       <figcaption class="figure-caption text-center">Change kvantum to kvantum-dark</figcaption>
       </figure>
       </div>
@@ -70,9 +64,7 @@ Result
 
    <div class="text-center">
    <figure class="figure">
-   <a href="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-2.png">
    <img src="{attach}/images/fix-dark-text-in-dark-theme-using-qt-in-gnome-2.png" class="figure-img img-fluid rounded" alt="Interface after fix (Goldendict)">
-   </a>
    <figcaption class="figure-caption text-center">Interface after fix (Goldendict)</figcaption>
    </figure>
    </div>

@@ -66,3 +66,31 @@ var Footnotes = {
         $('#footnotediv').stop();
     }
 }
+
+$('img').click(function () {
+    var src = $(this).attr('src');
+    var modal;
+
+    function removeModal() {
+        modal.remove();
+        $('#content').off('keyup.modal-close');
+    }
+    modal = $('<div>').css({
+        background: 'rgba(0,0,0,.5) url(' + src + ') no-repeat center',
+        backgroundSize: 'contain',
+        width: '100%',
+        height: 'calc(100% - 3.6rem)',
+        position: 'fixed',
+        zIndex: '1000',
+        top: '3.6rem',
+        left: '0',
+        cursor: 'zoom-out'
+    }).click(function () {
+        removeModal();
+    }).appendTo('#content');
+    $('#content').on('keyup.modal-close', function (e) {
+        if (e.key === 'Escape') {
+            removeModal();
+        }
+    });
+});
