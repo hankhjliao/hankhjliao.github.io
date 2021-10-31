@@ -11,9 +11,9 @@ THEME = 'theme'
 PATH = 'content'
 
 MENUITEMS = (
-  ('Home','/'),
-  ('About','/about.html'),
-  ('Blog','/blog/'),
+    ('Home', '/'),
+    ('About', '/about.html'),
+    ('Blog', '/blog/'),
 )
 
 DEFAULT_PAGINATION = 5
@@ -36,7 +36,8 @@ EXTRA_PATH_METADATA = {}
 # static paths will be copied without parsing their contents
 STATIC_PATHS = ['images']
 
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+DIRECT_TEMPLATES = ['index', 'tags',
+                    'categories', 'authors', 'archives', 'search']
 
 DISPLAY_CATEGORIES_ON_MENU = False
 USE_FOLDER_AS_CATEGORY = False
@@ -90,10 +91,11 @@ SOCIAL = ()
 ################################
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ["render_math", "tag_cloud", "better_codeblock_line_numbering", "pelican-encrypt-content", "tipue_search", "pelican-toc", "readtime"]
+PLUGINS = ["render_math", "tag_cloud", "better_codeblock_line_numbering",
+           "pelican-encrypt-content", "tipue_search", "pelican-toc", "readtime"]
 
 MARKDOWN = {
-    'extensions' : [
+    'extensions': [
         'markdown.extensions.admonition',
         'markdown.extensions.codehilite',
         'markdown.extensions.extra',
@@ -108,7 +110,7 @@ MARKDOWN = {
     ],
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': 'False'},
-        "pymdownx.emoji": {"options": {"attributes": {"align": "absmiddle", "height": "20px", "width": "20px"},}},
+        "pymdownx.emoji": {"options": {"attributes": {"align": "absmiddle", "height": "20px", "width": "20px"}, }},
     },
 }
 
@@ -117,10 +119,10 @@ TAG_CLOUD_SIDEBAR_MAX_ITEMS = 15
 TAG_CLOUD_SORTING = "size"
 TAG_CLOUD_BADGE = True
 
-TIPUE_SEARCH= True
+TIPUE_SEARCH = True
 
 TOC = {
-    'TOC_HEADERS'      : '^h[1-6]',
-    'TOC_RUN'          : 'true',
+    'TOC_HEADERS': '^h[1-6]',
+    'TOC_RUN': 'true',
     'TOC_INCLUDE_TITLE': 'false',
 }
