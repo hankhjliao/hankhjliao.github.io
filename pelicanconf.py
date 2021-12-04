@@ -59,7 +59,10 @@ DRAFT_SAVE_AS = 'posts/draft/{slug}/index.html'
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
-UTTERANC_REPO_NAME = 'hankliao87/blog'
+#UTTERANC_REPO_NAME = 'hankliao87/blog'
+GISCUS_REPO_NAME = 'hankliao87/blog'
+GISCUS_REPO_ID = 'MDEwOlJlcG9zaXRvcnkyMjI3Njc0OTU'
+GISCUS_CATEGORY_ID = 'DIC_kwDODUcph84CAJSe'
 
 ################################
 # Feed
