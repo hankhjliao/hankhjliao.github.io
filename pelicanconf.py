@@ -6,7 +6,7 @@ AUTHOR = 'hankliao87'
 SITENAME = u'Hank Liao\'s Blog'
 # SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
-LOGO_IMG = 'images/logo.png'
+LOGO_IMG = 'https://github.com/identicons/hankliao87.png'
 THEME = 'theme'
 PATH = 'content'
 
