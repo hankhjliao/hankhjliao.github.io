@@ -67,7 +67,7 @@ var Footnotes = {
     }
 }
 
-$('img').click(function () {
+$('img:not(#logo)').click(function () {
     var src = $(this).attr('src');
     var modal;
 
