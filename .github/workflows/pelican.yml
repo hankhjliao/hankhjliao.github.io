@@ -32,9 +32,9 @@ jobs:
         touch ./output/.nojekyll
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: JamesIves/github-pages-deploy-action@4.2.5
       with:
         branch: gh-pages # the branch the action should deploy to.
         folder: output # the folder the action should deploy.
-        token: ${{ secrets.GH_PAT }}
+        # token: ${{ secrets.GH_PAT }}
         single-commit: true
