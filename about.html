@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="theme-color" content="#343a40">
+    <meta name="theme-color" content="#212529">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/bootstrap.min.css">
@@ -11,166 +11,214 @@
 </head>
 
 <body class="bg" background="src/img/sky-silhouette-star-1280.jpg">
-    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <symbol id="icon-star-full" viewBox="0 0 32 32">
                 <title>star-full</title>
-                <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+                <path
+                    d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z">
+                </path>
             </symbol>
         </defs>
     </svg>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand" href="/">
-        <img src="https://github.com/identicons/hankliao87.png" width="30rem">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-          <li class="nav-item active"><a class="nav-link" href="/about.html">About
-              <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-        </ul>
-      </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://hankliao87.github.io/about.html">
+                <img src="https://github.com/identicons/hankliao87.png" id="logo" width="30rem">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class='nav-link' href="/">Home</a></li>
+                    <li class="nav-item"><a class='nav-link active' href="/about.html">About</a></li>
+                    <li class="nav-item"><a class='nav-link' href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    <div class="m-3 px-3"></div>
     <div class="container-fluid">
-        <pre></pre>
         <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-                <div class="jumbotron" style="opacity: 0.9">
+            <div class="col-12 col-lg-8 offset-lg-2 col-xxl-6 offset-xxl-3">
+                <div class="px-5 pt-5 pb-3 mb-4 bg-light rounded-3" style="opacity: 0.95;">
                     <div class="row">
                         <div class="col-8 col-md-9 my-3">
-                            <h1 class="text-center display-4 Tangerine">Hank Liao</h1>
+                            <p class="text-center display-4 Tangerine">Hank Liao</p>
                         </div>
                         <div class="col-4 col-md-3">
                             <img class="round" src="https://avatars0.githubusercontent.com/u/32926543?s=100">
                         </div>
                     </div>
                     <hr class="my-4">
-                    <p class="col">
-                        <h3>Skill</h3>
+                    <div class="row my-4">
+                        <h3>Skills</h3>
                         <p class="text-muted"> Self-rating from
-                        <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                        <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                        <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                        to
-                        <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                        <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4">
+                            <svg class="icon icon-star-full">
+                                <use xlink:href="#icon-star-full"></use>
+                            </svg>
+                            <svg class="icon icon-star-full">
+                                <use xlink:href="#icon-star-full"></use>
+                            </svg>
+                            <svg class="icon icon-star-full">
+                                <use xlink:href="#icon-star-full"></use>
+                            </svg>
+                            to
+                            <svg class="icon icon-star-full">
+                                <use xlink:href="#icon-star-full"></use>
+                            </svg>
+                        </p>
+                        <div class="row mx-auto row-cols-2 row-cols-md-3">
                             <div class="col">
-                                C and Cpp <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                          <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                          <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                C++ <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
                             </div>
                             <div class="col">
-                                Python <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                       <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                       <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                Python <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
                                 <!-- <div class="ml-2 text-muted">Numpy, Matplotlib, Pandas, Opencv, IPython, PyQt5
                                 </div> -->
                             </div>
                             <div class="col">
-                                Docker <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                       <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                C <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
                             </div>
                             <div class="col">
-                                Linux <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                      <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                Linux <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
                             </div>
                             <div class="col">
-                                Git <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                Git <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
                             </div>
                             <div class="col">
-                                Latex <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                                      <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                            </div>
-                            <div class="col">
-                                Node.js <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
-                            </div>
-                            <div class="col">
-                                SQL <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                Latex <svg class="icon icon-star-full">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
                             </div>
                         </div>
-                    </p>
-                    <p class="col">
+                    </div>
+                    <div class="row my-4">
                         <h3>Projects</h3>
-                        <div class="row row-cols-1 row-cols-sm-2">
-                            <div class="col px-sm-1 px-3 pb-2">
+                        <div class="row mx-auto row-cols-1 row-cols-md-2">
+                            <div class="col px-sm-2 px-3 pt-3">
                                 <div class="card h-100">
                                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="https://github.com/hankliao87/deploy-style-transfer-on-android"
-                                                target="_blank" class="text-dark">Deploy Style Transfer on the Android Devices</a></h5>
-                                        <!-- <p class="card-text">Some description.</p> -->
+                                        <h5 class="card-title"><a href="https://github.com/hankliao87/RSS2Pocket"
+                                                target="_blank"
+                                                class="text-dark stretched-link text-decoration-none">RSS2Pocket</a>
+                                        </h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Python, GitHub Action</h6>
+                                        <p class="card-text">Execute the python script hourly to save articles from RSS
+                                            feed
+                                            to Pocket.</p>
                                     </div>
                                     <div class="card-footer text-muted text-center">
-                                        <small class="text-muted">Dec 2019</small>
+                                        <small class="text-muted">Fall 2020</small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col px-sm-1 px-3 pb-2">
+                            <div class="col px-sm-2 px-3 pt-3">
+                                <div class="card h-100">
+                                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="https://github.com/hankliao87/magic_wand_mbed"
+                                                target="_blank"
+                                                class="text-dark stretched-link text-decoration-none">Magic
+                                                Wand on mbed FRDM-K66F</a></h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">C++, Python, TensorFlow, FRDM-K66F
+                                        </h6>
+                                        <p class="card-text">Original project only deploys to Arduino, Himax WE1 EVB,
+                                            and
+                                            SparkFun Edge. I deploy it to mbed FRDM-K66F.</p>
+                                    </div>
+                                    <div class="card-footer text-muted text-center">
+                                        <small class="text-muted">Spring 2020</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col px-sm-2 px-3 pt-3">
                                 <div class="card h-100">
                                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                                     <div class="card-body">
                                         <h5 class="card-title"><a href="https://github.com/hankliao87/10720EE366000"
-                                                target="_blank" class="text-dark">Image
-                                                Encrypting
-                                                and Decrypting</a></h5>
-                                        <!-- <p class="card-text">Some description.</p> -->
+                                                target="_blank"
+                                                class="text-dark stretched-link text-decoration-none">Image
+                                                Encrypting and Decrypting</a></h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Python, OpenCV, Qt5</h6>
+                                        <p class="card-text">Treat an image as a symmetric key to encrypt or decrypt
+                                            another
+                                            image.</p>
                                     </div>
                                     <div class="card-footer text-muted text-center">
-                                        <small class="text-muted">Jun 2019</small>
+                                        <small class="text-muted">Spring 2019</small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col px-sm-1 px-3 pb-2">
+                            <div class="col px-sm-2 px-3 pt-3">
                                 <div class="card h-100">
                                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                                     <div class="card-body">
-                                        <h5 class="card-title"><a
-                                                href="https://github.com/NTHUEE240500/Led_Matrix_Localization"
-                                                target="_blank" class="text-dark">Indoor Positioning</a></h5>
-                                        <!-- <p class="card-text">Some description.</p> -->
+                                        <h5 class="card-title"><a href="https://github.com/hankliao87/tracking-car"
+                                                target="_blank"
+                                                class="text-dark stretched-link text-decoration-none">Tracking Car</a>
+                                        </h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">C++, Python, Qt 4, Xbee v1, FRDM-K64F
+                                        </h6>
+                                        <p class="card-text">The robotic car will track the trace drawn on the ground,
+                                            and
+                                            it will send the value of the magnetic field back to the PC. PC will show
+                                            the
+                                            path according to the magnetic field value on the GUI at the same time.</p>
                                     </div>
                                     <div class="card-footer text-muted text-center">
-                                        <small class="text-muted">Jul 2018 - Aug 2018</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col px-sm-1 px-3 pb-2">
-                                <div class="card h-100">
-                                    <!-- <img src="..." class="card-img-top" alt="..."> -->
-                                    <div class="card-body">
-                                        <h5 class="card-title"><a
-                                                href="http://nthuee.org/makerthon/2018/RemoteCamCar/index.html"
-                                                target="_blank" class="text-dark">Remote Cam Car</a></h5>
-                                        <!-- <p class="card-text">Some description.</p> -->
-                                    </div>
-                                    <div class="card-footer text-muted text-center">
-                                        <small class="text-muted">Jan 2018</small>
+                                        <small class="text-muted">Spring 2018</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="flex-bottom text-muted text-right my-1">
-              <p>Photo Credit: <a href="https://unsplash.com/photos/0LU4vO5iFpM">Unsplash</a><br>
-                 Designed by <a href="https://github.com/hankliao87/"> Hank Liao</a></p>
-            </div>
-        </div>
-    </footer>
-    <script src="src/js/jquery-3.4.1.min.js"></script>
+    <div class="text-white-50 text-end my-1">
+        Designed by <a href="https://github.com/hankliao87/" class="text-white text-decoration-none"> Hank Liao</a>
+        <p>Photo by <a href="https://unsplash.com/@grakozy" class="text-white text-decoration-none">Greg Rakozy</a> on
+            <a href="https://unsplash.com/" class="text-white text-decoration-none">Unsplash</a></p>
+    </div>
+    <script src="src/js/jquery.min.js"></script>
     <script src="src/js/popper.min.js"></script>
     <script src="src/js/bootstrap.min.js"></script>
 </body>
