@@ -5,18 +5,6 @@
 
     <div class="row col-12 col-xl-11 mx-auto">
 
-        {% if TIPUE_SEARCH %}
-        <div class="col d-block d-lg-none">
-            <div class="col mx-0 px-0">
-                <form action="{{ SITEURL }}/search.html"
-                    onsubmit="return validateForm(this.elements['q'].value);">
-                    <input class="form-control" type="text" name="q" id="tipue_search_input" placeholder="Search"
-                        pattern=".{3,}" title="At least 3 characters" required>
-                </form>
-            </div>
-        </div>
-        {% endif %}
-
         <div class="col-12 col-lg-9 col-xxl-10">
             <div class="card w-100 my-1">
                 <div class="card-body m-3">
@@ -50,27 +38,27 @@
 
             {% if article.toc %}
             <div class="d-block d-lg-none">
-            <a href="#" class="btn btn-dark rounded-3"
-                style="position:fixed;bottom:6em;right:1em;z-index:1000">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-                </svg>
-            </a>
+                <a href="#" class="btn btn-dark rounded-3"
+                    style="position:fixed;bottom:6em;right:1em;z-index:1000">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                </a>
 
-            <a class="btn btn-dark"
-            style="position:fixed;bottom:3em;right:1em;z-index:1000"
-            data-bs-toggle="offcanvas" href="#toc_sidebar" role="button" aria-controls="toc_sidebar">
-                TOC
-            </a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="toc_sidebar" aria-labelledby="toc_sidebar_title">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="toc_sidebar_title">{{article.title}}</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <a class="btn btn-dark"
+                style="position:fixed;bottom:3em;right:1em;z-index:1000"
+                data-bs-toggle="offcanvas" href="#toc_sidebar" role="button" aria-controls="toc_sidebar">
+                    TOC
+                </a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="toc_sidebar" aria-labelledby="toc_sidebar_title">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="toc_sidebar_title">{{article.title}}</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        {{article.toc}}
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                    {{article.toc}}
-                </div>
-            </div>
             </div>
             <div class="d-none d-lg-block">
                 <a href="#" class="btn btn-dark rounded-3"
@@ -82,12 +70,12 @@
             </div>
             {% else %}
             <div>
-            <a href="#" class="btn btn-dark rounded-3"
-                style="position:fixed;bottom:3em;right:1em;z-index:1000">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-                </svg>
-            </a>
+                <a href="#" class="btn btn-dark rounded-3"
+                    style="position:fixed;bottom:3em;right:1em;z-index:1000">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                </a>
             </div>
             {% endif %}
 
@@ -191,8 +179,9 @@
             {% endif %}
 
         </div>
-
-        {% include 'sidebar.html' %}
+        {% with toc=article.toc %}
+            {% include 'sidebar.html' %}
+        {% endwith %}
     </div>
 
 

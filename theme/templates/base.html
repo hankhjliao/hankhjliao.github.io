@@ -127,6 +127,14 @@
                     {% endif %}
                     {% endif %}
                 </ul>
+                {% if TIPUE_SEARCH %}
+                <form class="d-flex" action="{{ SITEURL }}/search.html"
+                      onsubmit="return validateForm(this.elements['q'].value);">
+                    <input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search"
+                    pattern=".{3,}" title="At least 3 characters" required>
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                {% endif %}
             </div>
         </div>
     </nav>
