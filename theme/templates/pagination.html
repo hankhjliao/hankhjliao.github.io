@@ -2,33 +2,22 @@
 <nav>
     <ul class="pagination justify-content-center">
         {% if articles_page.has_previous() %}
-        {% if articles_page.previous_page_number() == 1 %}
-        <li class="page-item">
-            <a class="page-link" href="{{ SITEURL }}/{{ page_name }}.html" tabindex="-1">&laquo;</a>
-        </li>
+            {% set num = articles_page.previous_page_number() %}
+            <li class="page-item"><a class="page-link" href="{{ SITEURL }}/{{ page_name }}.html">&laquo;</a></li>
         {% else %}
-        <li class="page-item">
-            <a class="page-link" href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html"
-                tabindex="-1">&laquo;</a>
-        </li>
-        {% endif %}
-        {% else %}
-        <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
-        </li>
+            <li class="page-item disabled"><a class="page-link" tabindex="-1" href="#" aria-disabled="true">&laquo;</a></li>
         {% endif %}
 
-        <li class="page-item disabled"><a class="page-link" href="#">{{ articles_page.number }}</a></li>
+        {% set num_start = [articles_page.number - 2, 1] | max %}
+        {% set num_end =  [articles_page.number + 2, articles_paginator.num_pages] | min %}
+        {% for num in range(num_start, num_end + 1) %}
+            <li class="page-item {{ 'active' if num == articles_page.number else '' }}"><a class="page-link" href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a></li>
+        {% endfor %}
 
         {% if articles_page.has_next() %}
-        <li class="page-item">
-            <a class="page-link"
-                href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">&raquo;</a>
-        </li>
+            <li class="page-item"><a class="page-link" href="{{ SITEURL }}/{{ page_name }}{{ articles_paginator.num_pages }}.html">&raquo;</a></li>
         {% else %}
-        <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&raquo;</a>
-        </li>
+            <li class="page-item disabled"><a class="page-link" tabindex="-1" href="#" aria-disabled="true">&raquo;</a></li>
         {% endif %}
     </ul>
 </nav>
