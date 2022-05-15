@@ -7,8 +7,17 @@
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#212529">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#F8F9FA" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#212529" media="(prefers-color-scheme: dark)">
+    
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygment.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/admonition.css" />
 
     {% if FEED_ALL_ATOM %}
     <link
@@ -48,14 +57,6 @@
         href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}"
         type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
-
-
-    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygment.css" />
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/admonition.css" />
 
     {% if TIPUE_SEARCH %}
     <!-- <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css"> -->
@@ -97,21 +98,32 @@
     {% endblock head %}
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{ SITEURL }}/">
+<body class="bg-light">
+    <script>
+        if (localStorage.getItem("pref-theme") === "dark") {
+            document.body.classList.add('dark');
+        } else if (localStorage.getItem("pref-theme") === "light") {
+            document.body.classList.remove('dark')
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+        }
+    </script>
+
+    <nav class="navbar navbar-light bg-light sticky-top">
+        <div class="container-xxl">
+            <!-- <a class="navbar-brand" href="{{ SITEURL }}/">
                 <img src="{{ LOGO_IMG }}" id="logo" width="30rem">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            </a> -->
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
+            <a class="navbar-brand text-dark" href="{{ SITEURL }}">{{SITENAME}}</a>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     {% for title, link in MENUITEMS %}
-                    <li class="nav-item"><a class='nav-link {% if title=="Blog" %} active {% endif %}' href="{{ link }}">{{ title }}</a></li>
+                    <li class="nav-item"><a class='nav-link {% if link=="/blog/" %} active {% endif %}' href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
                     {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in pages %}
@@ -126,13 +138,13 @@
                     {% endfor %}
                     {% endif %}
                     {% endif %}
-                </ul>
+                </ul> -->
                 {% if TIPUE_SEARCH %}
                 <form class="d-flex" action="{{ SITEURL }}/search.html"
                       onsubmit="return validateForm(this.elements['q'].value);">
                     <input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search"
                     pattern=".{3,}" title="At least 3 characters" required>
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
                 {% endif %}
             </div>
@@ -207,6 +219,18 @@
     {% endif %}
 
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/custom.js"></script>
+
+    <script>
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            if (document.body.className.includes("dark")) {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            } else {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            }
+        })
+    </script>
 </body>
 
 </html>

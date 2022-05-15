@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'hankliao87'
-SITENAME = u'Hank Liao\'s Blog'
+SITENAME = u'Hank\'s Blog'
 # SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
 LOGO_IMG = 'https://github.com/identicons/hankliao87.png'
@@ -11,9 +11,10 @@ THEME = 'theme'
 PATH = 'content'
 
 MENUITEMS = (
-    ('Home', '/'),
-    ('About', '/about.html'),
-    ('Blog', '/blog/'),
+    (u'Hank\'s Blog', '/blog/'),
+    # ('Home', '/'),
+    # ('About', '/about.html'),
+    # ('Blog', '/blog/'),
 )
 
 DEFAULT_PAGINATION = 5

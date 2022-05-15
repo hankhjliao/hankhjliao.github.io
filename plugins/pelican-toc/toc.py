@@ -88,14 +88,16 @@ class HtmlTreeNode(object):
     def __str__(self):
         ret = ''
         if self.parent or self.include_title:
-            ret = "<a class='list-group-item list-group-item-action' href='#{0}' title='{1}'>{1}</a>".format(
+            ret = "<li class='list-group-item'><a class='text-decoration-none text-dark' href='#{0}'>{1}</a>".format(
                     self.id, self.header)
 
         if self.children:
-            # ret += "<ul class=\"list-group\">{}</ul>".format('{}'*len(self.children)).format(
-            #         *self.children)
-            ret += "{}".format('{}'*len(self.children)).format(
+            ret += "<ul class='list-group list-group-flush'>{}</ul>".format('{}'*len(self.children)).format(
                     *self.children)
+            # ret += "{}".format('{}'*len(self.children)).format(
+            #         *self.children)
+        if self.parent or self.include_title:
+            ret += "</li>"
 
         # # each list
         # if self.parent or self.include_title:
@@ -104,9 +106,9 @@ class HtmlTreeNode(object):
         # end wrapper
         if not self.parent:
             if self.include_title:
-                ret = "<div id='toc-sidebar' class='list-group'><ul>{}</ul></div>".format(ret)
+                ret = "<div id='toc-sidebar' class='list-group list-group-flush'><ul>{}</ul></div>".format(ret)
             else:
-                ret = "<div id='toc-sidebar' class='list-group'>{}</div>".format(ret)
+                ret = "<div id='toc-sidebar' class='list-group list-group-flush'>{}</div>".format(ret)
 
         return ret
 

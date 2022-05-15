@@ -3,77 +3,79 @@
 {% block content %}
 <section id="content" class="body">
 
-    <div class="row col-12 col-xl-11 mx-auto">
+    <div class="row col-12 mx-auto">
 
-        <div class="col-12 col-lg-9 col-xxl-10">
-            <div class="card w-100 my-1">
-                <div class="card-body m-3">
-                    <div class="h1 card-title">{{ article.title }}</div>
+        <div class="col-12 col-xxl-6 offset-xxl-3">
+            <div class="w-100 my-1">
+                <div class="m-3">
+                    <div class="h1">{{ article.title }}</div>
                     {% import 'translations.html' as translations with context %}
                     {{ translations.translations_for(article) }}
-                    <div class="h6 card-subtitle text-end">
+                    <div class="text-muted mb-3">
                         {{ article.locale_date }}
-                        {% if article.authors %}
+                        <!-- {% if article.authors %} -
                         {% for author in article.authors|sort %}
-                        <a class="text-secondary" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
+                        <a class="text-muted text-decoration-none" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
                         {% endfor %}
-                        {% endif %}
-                        {% if article.readtime %}
-                        <div><b>Read in {{article.readtime.minutes}} min.</b></div>
-                        {% endif %}
+                        {% endif %} -->
+                        {% if article.readtime %}- {{article.readtime.minutes}} min{% endif %}
                     </div>
-                    <div class="card-text">
+                    <div class="">
                         {{ article.content }}
                     </div>
                 </div>
-                <div class="card-footer text-muted">
+                <div class="pt-3">
                     {% if article.tags %}
                     {% for tag in article.tags %}
-                    <a class="badge bg-dark link-light" href="{{ SITEURL }}/{{ tag.url }}">{{ tag|e }}</a>
+                    <a class="badge link-dark text-decoration-none border" href="{{ SITEURL }}/{{ tag.url }}">{{ tag|e }}</a>
                     &MediumSpace;
                     {% endfor %}
                     {% endif %}
                 </div>
             </div>
+            <hr>
 
             {% if article.toc %}
-            <div class="d-block d-lg-none">
-                <a href="#" class="btn btn-dark rounded-3"
+            <div class="d-block d-xxl-none">
+                <a href="#" class="text-decoration-none text-dark"
                     style="position:fixed;bottom:6em;right:1em;z-index:1000">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                       <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
                     </svg>
                 </a>
-
-                <a class="btn btn-dark"
-                style="position:fixed;bottom:3em;right:1em;z-index:1000"
-                data-bs-toggle="offcanvas" href="#toc_sidebar" role="button" aria-controls="toc_sidebar">
-                    TOC
+                <a class="ext-decoration-none text-dark"
+                    style="position:fixed;bottom:3em;right:1em;z-index:1000"
+                    data-bs-toggle="offcanvas" href="#toc_sidebar" role="button" aria-controls="toc_sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                    <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                  </svg>
                 </a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="toc_sidebar" aria-labelledby="toc_sidebar_title">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="toc_sidebar_title">{{article.title}}</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="ms-auto btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         {{article.toc}}
                     </div>
                 </div>
             </div>
-            <div class="d-none d-lg-block">
-                <a href="#" class="btn btn-dark rounded-3"
+
+            <div class="d-none d-xxl-block">
+                <a href="#" class="text-decoration-none text-dark"
                     style="position:fixed;bottom:3em;right:1em;z-index:1000">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
                     </svg>
                 </a>
             </div>
             {% else %}
             <div>
-                <a href="#" class="btn btn-dark rounded-3"
+                <a href="#" class="text-decoration-none text-dark"
                     style="position:fixed;bottom:3em;right:1em;z-index:1000">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                       <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
                     </svg>
                 </a>
             </div>
@@ -91,8 +93,9 @@
                 </script>
             </div>
             {% endif %}
+
             {% if GISCUS_REPO_NAME %}
-            <div class="comments">
+            <div class="comments px-3">
                 <script src="https://giscus.app/client.js"
                         data-repo="{{GISCUS_REPO_NAME}}"
                         data-repo-id="{{GISCUS_REPO_ID}}"
@@ -108,6 +111,7 @@
                 </script>
             </div>
             {% endif %}
+
             {% if DISQUS_SITENAME %}
             <div class="comments">
                 <h3>Comments</h3>
