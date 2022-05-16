@@ -21,17 +21,17 @@
             {% endblock %}
             <div class="row">
                 {% for article in articles_page.object_list %}
-                <div class="card w-100 my-3 px-0">
+                <div class="card w-100 my-2 px-0">
                     <div class="card-body">
                         <div class="card-title">
                             <a class="fs-4 fw-bold text-body text-decoration-none stretched-link" href="{{ SITEURL }}/{{ article.url }}"
                                 rel="bookmark" title="{{ article.title|striptags }}">{{ article.title }}</a>
                         </div>
-                        <div class="text-muted card-subtitle">
+                        <div class="text-secondary card-subtitle">
                             {{ article.locale_date }}
                             <!-- {% if article.authors %} -
                             {% for author in article.authors|sort %}
-                            <a class="text-muted text-decoration-none" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
+                            <a class="text-secondary text-decoration-none" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
                             {% endfor %}
                             {% endif %} -->
                             {% if article.readtime %}- {{article.readtime.minutes}} min{% endif %}
