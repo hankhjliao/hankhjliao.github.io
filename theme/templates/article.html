@@ -1,33 +1,31 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
 {% block content %}
-<section id="content" class="body">
-
+<section id="content">
     <div class="row col-12 mx-auto">
 
         <div class="col-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-            <div class="w-100 my-1">
-                <div class="my-3">
-                    <div class="h1">{{ article.title }}</div>
-                    {% import 'translations.html' as translations with context %}
-                    {{ translations.translations_for(article) }}
-                    <div class="text-muted mb-3">
-                        {{ article.locale_date }}
-                        <!-- {% if article.authors %} -
+            <div class="my-3">
+                <div class="fs-1">{{ article.title }}</div>
+                <!-- {% import 'translations.html' as translations with context %}
+                {{ translations.translations_for(article) }} -->
+                <div class="text-muted mb-3">
+                    {{ article.locale_date }}
+                    <!-- {% if article.authors %} -
                         {% for author in article.authors|sort %}
                         <a class="text-muted text-decoration-none" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
                         {% endfor %}
                         {% endif %} -->
-                        {% if article.readtime %}- {{article.readtime.minutes}} min{% endif %}
-                    </div>
-                    <div class="">
-                        {{ article.content }}
-                    </div>
+                    {% if article.readtime %}- {{article.readtime.minutes}} min{% endif %}
+                </div>
+                <div>
+                    {{ article.content }}
                 </div>
                 <div class="pt-3">
                     {% if article.tags %}
                     {% for tag in article.tags %}
-                    <a class="badge link-dark text-decoration-none border" href="{{ SITEURL }}/{{ tag.url }}">{{ tag|e }}</a>
+                    <a class="badge link-dark text-decoration-none border" href="{{ SITEURL }}/{{ tag.url }}">{{ tag|e
+                        }}</a>
                     &MediumSpace;
                     {% endfor %}
                     {% endif %}
@@ -39,22 +37,27 @@
             <div class="d-block d-xxl-none">
                 <a href="#" class="text-decoration-none text-dark"
                     style="position:fixed;bottom:4em;right:1em;z-index:1000">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                       <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
                     </svg>
                 </a>
-                <a class="text-decoration-none text-dark"
-                    style="position:fixed;bottom:1em;right:1em;z-index:1000"
+                <a class="text-decoration-none text-dark" style="position:fixed;bottom:1em;right:1em;z-index:1000"
                     data-bs-toggle="offcanvas" href="#toc_sidebar" role="button" aria-controls="toc_sidebar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
-                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-                    <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-                  </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-card-list" viewBox="0 0 16 16">
+                        <path
+                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                        <path
+                            d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                    </svg>
                 </a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="toc_sidebar" aria-labelledby="toc_sidebar_title">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="toc_sidebar_title">{{article.title}}</h5>
-                        <button type="button" class="ms-auto btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="ms-auto btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         {{article.toc}}
@@ -65,8 +68,10 @@
             <div class="d-none d-xxl-block">
                 <a href="#" class="text-decoration-none text-dark"
                     style="position:fixed;bottom:1em;right:1em;z-index:1000">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
                     </svg>
                 </a>
             </div>
@@ -74,127 +79,22 @@
             <div>
                 <a href="#" class="text-decoration-none text-dark"
                     style="position:fixed;bottom:1em;right:1em;z-index:1000">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                       <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
                     </svg>
                 </a>
             </div>
             {% endif %}
 
-            {% if UTTERANC_REPO_NAME %}
-            <div class="comments" id="comments">
-                <script src="https://utteranc.es/client.js"
-                        repo="{{UTTERANC_REPO_NAME}}"
-                        issue-term="title"
-                        label="content"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-            </div>
-            {% endif %}
-
-            {% if GISCUS_REPO_NAME %}
-            <div class="comments px-3 giscus"></div>
-            <script>
-                let giscusTheme = localStorage.getItem("theme") || "preferred_color_scheme";
-                let giscusAttributes = {
-                  "src": "https://giscus.app/client.js",
-                  "data-repo": "{{GISCUS_REPO_NAME}}",
-                  "data-repo-id": "{{GISCUS_REPO_ID}}",
-                  "data-category": "Announcements",
-                  "data-category-id": "{{GISCUS_CATEGORY_ID}}",
-                  "data-mapping": "title",
-                  "data-reactions-enabled": "1",
-                  "data-emit-metadata": "0",
-                  "data-theme": giscusTheme,
-                  "data-lang": "en",
-                  "data-loading": "lazy",
-                  "crossorigin": "anonymous",
-                  "async": "",
-                };
-                let giscusScript = document.createElement("script");
-                Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
-                document.body.appendChild(giscusScript);
-            </script>
-            {% endif %}
-
-            {% if DISQUS_SITENAME %}
-            <div class="comments">
-                <h3>Comments</h3>
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
-                    var disqus_identifier = "{{ article.url }}";
-                    (function () {
-                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                        dsq.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                </script>
-            </div>
-            {% endif %}
-
-            {% if JUVIA_ID %}
-            <h3>Comments</h3>
-            <div id="comments"></div>
-            <script type="text/javascript" class="juvia">
-                (function () {
-                    var options = {
-                        container: '#comments',
-                        site_key: '{{ JUVIA_ID }}',
-                        topic_key: location.pathname,
-                        topic_url: location.href,
-                        topic_title: '{{article.title}}',
-                        comment_order: 'earliest-first',
-                        include_base: !window.Juvia,
-                        include_css: !window.Juvia
-                    };
-
-                    function makeQueryString(options) {
-                        var key, params = [];
-                        for (key in options) {
-                            params.push(
-                                encodeURIComponent(key) +
-                                '=' +
-                                encodeURIComponent(options[key]));
-                        }
-                        return params.join('&');
-                    }
-
-                    function makeApiUrl(options) {
-                        // Makes sure that each call generates a unique URL, otherwise
-                        // the browser may not actually perform the request.
-                        if (!('_juviaRequestCounter' in window)) {
-                            window._juviaRequestCounter = 0;
-                        }
-
-                        // or use '//{{ JUVIA_URL }}/api/show_topic.js'
-                        // for dynamic switching between http and https
-                        var result =
-                            '//{{ JUVIA_URL }}/api/show_topic.js' +
-                            '?_c=' + window._juviaRequestCounter +
-                            '&' + makeQueryString(options);
-                        window._juviaRequestCounter++;
-                        return result;
-                    }
-
-                    var s = document.createElement('script');
-                    s.async = true;
-                    s.type = 'text/javascript';
-                    s.className = 'juvia';
-                    s.src = makeApiUrl(options);
-                    (document.getElementsByTagName('head')[0] ||
-                        document.getElementsByTagName('body')[0]).appendChild(s);
-                })();
-            </script>
-            {% endif %}
+            {% include 'plugin/comment.html' %}
 
         </div>
         {% with toc=article.toc %}
-            {% include 'sidebar.html' %}
+        {% include 'sidebar.html' %}
         {% endwith %}
     </div>
-
 
 </section>
 {% endblock %}

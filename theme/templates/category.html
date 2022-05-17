@@ -1,5 +1,6 @@
 {% extends "index.html" %}
+{% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
 {% block content_title %}
-<h2>Articles in the {{ category }} category</h2>
+<h4>Articles in the <a class="badge link-dark text-decoration-none border" href="{{ SITEURL }}/{{ category.url }}">{{
+        category }}</a> category:</h4>
 {% endblock %}
-

@@ -9,7 +9,9 @@
         <a class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center {% if output_file==tag.0.url %} active {% endif %}"
             href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0|e }}
             {% if TAG_CLOUD_BADGE %}
-                <span class="badge {% if output_file==tag.0.url %} bg-light text-dark {% else %} bg-dark {% endif %} rounded-pill">{{ tag.2 }}</span>
+            <span
+                class="badge {% if output_file==tag.0.url %} bg-light text-dark {% else %} bg-dark {% endif %} rounded-pill">{{
+                tag.2 }}</span>
             {% endif %}
         </a>
         {% endfor %}

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'hankliao87'
+AUTHOR = 'Hank Liao'
 SITENAME = u'Hank\'s Blog'
 # SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
@@ -11,14 +11,13 @@ THEME = 'theme'
 PATH = 'content'
 
 MENUITEMS = (
-    (u'Hank\'s Blog', '/blog/'),
     # ('Home', '/'),
     # ('About', '/about.html'),
     # ('Blog', '/blog/'),
 )
 
 DEFAULT_PAGINATION = 5
-# SUMMARY_MAX_LENGTH = 20
+SUMMARY_MAX_LENGTH = 20
 
 DEFAULT_LANG = 'en'
 TIMEZONE = 'Asia/Taipei'
@@ -58,8 +57,6 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 DRAFT_URL = 'posts/draft/{slug}/'
 DRAFT_SAVE_AS = 'posts/draft/{slug}/index.html'
 
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
 #UTTERANC_REPO_NAME = 'hankliao87/blog'
 GISCUS_REPO_NAME = 'hankliao87/blog'
 GISCUS_REPO_ID = 'MDEwOlJlcG9zaXRvcnkyMjI3Njc0OTU'
@@ -80,6 +77,7 @@ AUTHOR_FEED_RSS = None
 # Links
 ################################
 
+HOME_URL = 'https://hankliao87.github.io/'
 GITHUB_URL = 'https://github.com/hankliao87/'
 TWITTER_URL = 'https://twitter.com/hankliao87/'
 # FACEBOOK_URL = '/'
@@ -126,7 +124,7 @@ TAG_CLOUD_BADGE = True
 TIPUE_SEARCH = True
 
 TOC = {
-    'TOC_HEADERS': '^h[1-6]',
+    'TOC_HEADERS': '^h[1-4]',
     'TOC_RUN': 'true',
     'TOC_INCLUDE_TITLE': 'false',
 }

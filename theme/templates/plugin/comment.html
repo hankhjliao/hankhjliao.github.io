@@ -1,0 +1,102 @@
+{% if UTTERANC_REPO_NAME %}
+<div class="comments" id="comments">
+    <script src="https://utteranc.es/client.js" repo="{{UTTERANC_REPO_NAME}}" issue-term="title" label="content"
+        theme="github-light" crossorigin="anonymous" async>
+        </script>
+</div>
+{% endif %}
+
+{% if GISCUS_REPO_NAME %}
+<div class="comments px-3 giscus"></div>
+<script>
+    let giscusTheme = localStorage.getItem("theme") || "preferred_color_scheme";
+    let giscusAttributes = {
+        "src": "https://giscus.app/client.js",
+        "data-repo": "{{GISCUS_REPO_NAME}}",
+        "data-repo-id": "{{GISCUS_REPO_ID}}",
+        "data-category": "Announcements",
+        "data-category-id": "{{GISCUS_CATEGORY_ID}}",
+        "data-mapping": "title",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-theme": giscusTheme,
+        "data-lang": "en",
+        "data-loading": "lazy",
+        "crossorigin": "anonymous",
+        "async": "",
+    };
+    let giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.body.appendChild(giscusScript);
+</script>
+{% endif %}
+
+{% if DISQUS_SITENAME %}
+<div class="comments">
+    <h3>Comments</h3>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "{{ article.url }}";
+        (function () {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+{% endif %}
+
+{% if JUVIA_ID %}
+<h3>Comments</h3>
+<div id="comments"></div>
+<script type="text/javascript" class="juvia">
+    (function () {
+        var options = {
+            container: '#comments',
+            site_key: '{{ JUVIA_ID }}',
+            topic_key: location.pathname,
+            topic_url: location.href,
+            topic_title: '{{article.title}}',
+            comment_order: 'earliest-first',
+            include_base: !window.Juvia,
+            include_css: !window.Juvia
+        };
+
+        function makeQueryString(options) {
+            var key, params = [];
+            for (key in options) {
+                params.push(
+                    encodeURIComponent(key) +
+                    '=' +
+                    encodeURIComponent(options[key]));
+            }
+            return params.join('&');
+        }
+
+        function makeApiUrl(options) {
+            // Makes sure that each call generates a unique URL, otherwise
+            // the browser may not actually perform the request.
+            if (!('_juviaRequestCounter' in window)) {
+                window._juviaRequestCounter = 0;
+            }
+
+            // or use '//{{ JUVIA_URL }}/api/show_topic.js'
+            // for dynamic switching between http and https
+            var result =
+                '//{{ JUVIA_URL }}/api/show_topic.js' +
+                '?_c=' + window._juviaRequestCounter +
+                '&' + makeQueryString(options);
+            window._juviaRequestCounter++;
+            return result;
+        }
+
+        var s = document.createElement('script');
+        s.async = true;
+        s.type = 'text/javascript';
+        s.className = 'juvia';
+        s.src = makeApiUrl(options);
+        (document.getElementsByTagName('head')[0] ||
+            document.getElementsByTagName('body')[0]).appendChild(s);
+    })();
+</script>
+{% endif %}

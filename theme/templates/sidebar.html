@@ -1,5 +1,4 @@
 <div class="col d-none d-xxl-block">
-
     {% if toc %}
     <div class="card my-2" style="position: fixed;">
         <div class="card-header bg-white fw-bold">
@@ -9,8 +8,9 @@
             {{toc}}
         </div>
     </div>
-    {% else %}
-    {% if DISPLAY_PAGES_ON_MENU %}
+    {% endif %}
+
+    <!-- {% if DISPLAY_PAGES_ON_MENU %}
     <div class="card my-2">
         <div class="card-header bg-dark text-white">
             Pages
@@ -53,25 +53,16 @@
         <div class="list-group list-group-flush">
             {% for tag in tag_cloud %}
             {% if loop.index0 >= TAG_CLOUD_SIDEBAR_MAX_ITEMS %}{% break %}{% endif %}
-                <a class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center {% if output_file==tag.0.url %} active {% endif %}"
-                    href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0|e }}
-                    {% if TAG_CLOUD_BADGE %}
-                        <span class="badge {% if output_file==tag.0.url %} bg-light text-dark {% else %} bg-dark {% endif %} rounded-pill">{{ tag.2 }}</span>
-                    {% endif %}
-                </a>
+            <a class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center {% if output_file==tag.0.url %} active {% endif %}"
+                href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0|e }}
+                {% if TAG_CLOUD_BADGE %}
+                <span
+                    class="badge {% if output_file==tag.0.url %} bg-light text-dark {% else %} bg-dark {% endif %} rounded-pill">{{
+                    tag.2 }}</span>
+                {% endif %}
+            </a>
             {% endfor %}
         </div>
     </div>
-    {% endif %}
-
-    {% if SOCIAL %}
-    <h4>Social</h4>
-    <div class="list-group list-group-flush">
-        {% for name, url in SOCIAL %}
-        <a class="list-group-item list-group-item-action" href="{{ url|e }}">{{ name }}</a>
-        {% endfor %}
-    </div>
-    {% endif %}
-    {% endif %}
-
+    {% endif %} -->
 </div>
