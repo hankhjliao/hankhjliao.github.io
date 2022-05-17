@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Hank Liao'
-SITENAME = u'Hank\'s Blog'
+AUTHOR = 'Hung-Ju Liao'
+SITENAME = u'HJ\'s Blog'
 # SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
 LOGO_IMG = 'https://github.com/identicons/hankliao87.png'
