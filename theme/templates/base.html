@@ -105,8 +105,8 @@
         if (storedTheme) document.documentElement.setAttribute('data-theme', storedTheme)
     </script>
 
-    <nav class="navbar navbar-expand-xxl navbar-light bg-light sticky-top">
-        <div class="container-xxl">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-xl">
             <!-- <a class="navbar-brand" href="{{ SITEURL }}/">
                 <img src="{{ LOGO_IMG }}" id="logo" width="30rem">
             </a> -->
@@ -127,7 +127,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse my-3" id="navbarNav">
+            <div class="collapse navbar-collapse my-3 my-md-0" id="navbarNav">
                 <!-- <ul class="navbar-nav me-auto">
                     {% for title, link in MENUITEMS %}
                     <li class="nav-item"><a class='nav-link {% if link=="/blog/" %} active {% endif %}' href="{{ link }}">{{ title }}</a></li>
