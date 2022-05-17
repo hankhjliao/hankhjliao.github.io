@@ -6,7 +6,7 @@ $(function () {
     $('.footnote').each(function () {
         $(this).addClass('text-break');
     });
-    $('li').each(function () {
+    $('a').each(function () {
         $(this).addClass('text-break');
     });
     Footnotes.setup();
