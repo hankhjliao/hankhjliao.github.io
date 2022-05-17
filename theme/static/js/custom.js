@@ -3,6 +3,12 @@ $(function () {
         $(this).addClass('table table-sm table-hover');
         $(this).wrap('<div class="table-responsive"></div>');
     });
+    $('.footnote').each(function () {
+        $(this).addClass('text-break');
+    });
+    $('li').each(function () {
+        $(this).addClass('text-break');
+    });
     Footnotes.setup();
 });
 
