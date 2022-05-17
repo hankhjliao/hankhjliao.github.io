@@ -81,7 +81,7 @@ AUTHOR_FEED_RSS = None
 ################################
 
 GITHUB_URL = 'https://github.com/hankliao87/'
-# TWITTER_URL = '/'
+TWITTER_URL = 'https://twitter.com/hankliao87/'
 # FACEBOOK_URL = '/'
 
 # Blogroll
