@@ -232,7 +232,7 @@
     {% endif %}
 
     <script>
-        function setGiscusTheme(theme) {
+        var setGiscusTheme = (theme) => {
             const iframe = document.querySelector('.giscus-frame');
             if (!iframe) return;
             var message = {setConfig: {
@@ -240,7 +240,7 @@
             }};
             iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
         };
-        document.getElementById("theme-toggle").addEventListener("click", () => {
+        $("#theme-toggle").click(() => {
             var targetTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
             document.documentElement.setAttribute('data-theme', targetTheme)
             localStorage.setItem('theme', targetTheme);

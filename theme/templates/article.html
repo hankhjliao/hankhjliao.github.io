@@ -95,21 +95,28 @@
             {% endif %}
 
             {% if GISCUS_REPO_NAME %}
-            <div class="comments px-3">
-                <script src="https://giscus.app/client.js"
-                        data-repo="{{GISCUS_REPO_NAME}}"
-                        data-repo-id="{{GISCUS_REPO_ID}}"
-                        data-category="Announcements"
-                        data-category-id="{{GISCUS_CATEGORY_ID}}"
-                        data-mapping="title"
-                        data-reactions-enabled="1"
-                        data-emit-metadata="0"
-                        data-theme="preferred_color_scheme"
-                        data-lang="en"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-            </div>
+            <div class="comments px-3 giscus"></div>
+            <script>
+                let giscusTheme = localStorage.getItem("theme") || "preferred_color_scheme";
+                let giscusAttributes = {
+                  "src": "https://giscus.app/client.js",
+                  "data-repo": "{{GISCUS_REPO_NAME}}",
+                  "data-repo-id": "{{GISCUS_REPO_ID}}",
+                  "data-category": "Announcements",
+                  "data-category-id": "{{GISCUS_CATEGORY_ID}}",
+                  "data-mapping": "title",
+                  "data-reactions-enabled": "1",
+                  "data-emit-metadata": "0",
+                  "data-theme": giscusTheme,
+                  "data-lang": "en",
+                  "data-loading": "lazy",
+                  "crossorigin": "anonymous",
+                  "async": "",
+                };
+                let giscusScript = document.createElement("script");
+                Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+                document.body.appendChild(giscusScript);
+            </script>
             {% endif %}
 
             {% if DISQUS_SITENAME %}
