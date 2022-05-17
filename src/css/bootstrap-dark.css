@@ -6155,7 +6155,7 @@
   
   [data-theme='dark'] .modal-backdrop {
     --bs-dark-backdrop-zindex: 1050;
-    --bs-dark-backdrop-bg: #fff;
+    --bs-dark-backdrop-bg: #000;
     --bs-dark-backdrop-opacity: 0.5;
     position: fixed;
     top: 0;
@@ -7582,7 +7582,7 @@
     z-index: 1040;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: #000;
   }
   
   [data-theme='dark'] .offcanvas-backdrop.fade {
