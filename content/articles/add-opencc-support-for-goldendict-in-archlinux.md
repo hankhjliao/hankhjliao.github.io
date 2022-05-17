@@ -4,7 +4,7 @@ Date: 2020-1-23 18:20
 Category: Tutorial
 Tags: Tutorial
 Slug: add-opencc-support-for-goldendict-in-archlinux
-Summary: Tutorial of adding opencc support for goldendict in archlinux
+Summary: When you install goldendict using `yay`, you won't see the `Chinese Conversion` section in the transliteration option.
 ---
 
 ## Problem
