@@ -44,8 +44,8 @@ USE_FOLDER_AS_CATEGORY = False
 
 ARTICLE_PATHS = ['articles']
 ARTICLE_EXCLUDES = []
-ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{slug}/index.html'
+ARTICLE_URL = 'posts/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
 ARTICLE_ORDER_BY = 'reversed-date'
 
 DISPLAY_PAGES_ON_MENU = False

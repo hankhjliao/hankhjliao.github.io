@@ -3,7 +3,7 @@ Title: [Fontconfig] Fix TW-Kai Pollution
 Date: 2021-10-31 19:20
 Category: Tutorial
 Tags: Tutorial
-Slug: fontconfig-fix-tw-kai-pollution
+Slug: 2021-10-31-fontconfig-fix-tw-kai-pollution
 Summary: For the sake of displaying most of the CJK characters in Linux, you might get the solution of installing `TW-Kai` and `TW-Sung` fonts after googling.
 ---
 

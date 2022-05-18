@@ -1,9 +1,9 @@
 ---
 Title: Python Linters, Formatters, and Unit Testing Comparison
-Date: 2021-9-29 16:20
+Date: 2021-09-29 16:20
 Category: Python
 Tags: Python, Comparison
-Slug: python-linter-formatter-unit-testing-comparison
+Slug: 2021-09-29-python-linter-formatter-unit-testing-comparison
 Summary: Python linters, formatters, and unit testing comparison
 ---
 

@@ -3,7 +3,7 @@ Fix Dark Text on Dark Background of QT Apps in Gnome with Dark Theme
 :date: 2021-07-14 20:00
 :category: Tutorial
 :tags: Tutorial
-:slug: fix-dark-text-on-dark-background-of-qt-apps-in-gnome-with-dark-theme
+:slug: 2021-07-14-fix-dark-text-on-dark-background-of-qt-apps-in-gnome-with-dark-theme
 :summary: When we change the theme of the QT apps to the dark varient, the text of the interference might be difficult to see on the dark background.
 
 Problem
