@@ -16,7 +16,7 @@ MENUITEMS = (
     # ('Blog', '/blog/'),
 )
 
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 10
 SUMMARY_MAX_LENGTH = 20
 
 DEFAULT_LANG = 'en'
@@ -28,13 +28,13 @@ DATE_FORMATS = {
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.loopcontrols']}
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # path-specific metadata
 EXTRA_PATH_METADATA = {}
 
 # static paths will be copied without parsing their contents
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'static']
 
 DIRECT_TEMPLATES = ['index', 'tags',
                     'categories', 'authors', 'archives', 'search']
@@ -94,7 +94,7 @@ SOCIAL = ()
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ["render_math", "tag_cloud", "better_codeblock_line_numbering",
-           "pelican-encrypt-content", "tipue_search", "pelican-toc", "readtime"]
+           "pelican-encrypt-content", "tipue_search", "pelican-toc", "readtime", "sitemap"]
 
 MARKDOWN = {
     'extensions': [
@@ -127,4 +127,19 @@ TOC = {
     'TOC_HEADERS': '^h[1-4]',
     'TOC_RUN': 'true',
     'TOC_INCLUDE_TITLE': 'false',
+}
+
+SITEMAP = {
+    "exclude": ["tag/", "category/", "author/"],
+    "format": "xml",
+    "priorities": {
+        "articles": 0.5,
+        "indexes": 0.5,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly"
+    }
 }
