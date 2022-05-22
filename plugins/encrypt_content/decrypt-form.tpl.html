@@ -10,7 +10,7 @@
 </form>
 
 {% for library in js_libraries %}
-    <script type="text/javascript" src="{{ library }}"></script>
+<script type="text/javascript" src="{{ library }}"></script>
 {% endfor %}
 
 <script type="text/javascript">
@@ -20,7 +20,7 @@
              * Strips the padding character from decrypted content.
              */
             for (var i = padded_content.length; i > 0; i--) {
-                if (padded_content[i-1] !== padding_char) {
+                if (padded_content[i - 1] !== padding_char) {
                     return padded_content.slice(0, i);
                 }
             }
@@ -39,7 +39,7 @@
                     ciphertext: ciphertext
                 };
 
-            var plaintext = CryptoJS.AES.decrypt(bundle, key, {iv: iv, padding: CryptoJS.pad.NoPadding});
+            var plaintext = CryptoJS.AES.decrypt(bundle, key, { iv: iv, padding: CryptoJS.pad.NoPadding });
 
             try {
                 return strip_padding(plaintext.toString(CryptoJS.enc.Utf8), padding_char);
@@ -50,14 +50,15 @@
             }
         };
 
-        var init_decryptor = function() {
+
+        document.addEventListener('DOMContentLoaded', function () {
             var decrypt_btn = document.getElementById('pec-decrypt-content'),
                 password_input = document.getElementById('pec-content-password'),
                 encrypted_content = document.getElementById('pec-encrypted-content'),
                 decrypted_content = document.getElementById('pec-decrypted-content'),
                 decrypt_form = document.getElementById('pec-decrypt-form');
 
-            decrypt_btn.addEventListener('click', function () {
+            var decrypt_document = function (event) {
                 // grab the ciphertext bundle
                 var parts = encrypted_content.innerHTML.split(';');
 
@@ -81,9 +82,12 @@
                     // ¯\_(ツ)_/¯
                     password_input.value = '';
                 }
-            });
-        };
-
-        document.addEventListener('DOMContentLoaded', init_decryptor);
+                event.preventDefault();
+                return false;
+            }
+            
+            decrypt_btn.addEventListener('click', decrypt_document);
+            decrypt_form.addEventListener('submit', decrypt_document);
+        });
     })();
 </script>

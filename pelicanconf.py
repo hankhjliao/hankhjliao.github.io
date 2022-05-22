@@ -105,7 +105,7 @@ PLUGINS = [
     "better_figures",
     "better_tables",
     "pelican-cjk",
-    "pelican-encrypt-content",
+    "encrypt_content",
     "readtime",
     "render_math", 
     "sitemap",

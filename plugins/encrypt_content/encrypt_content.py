@@ -18,12 +18,12 @@ from pelican import signals, generators
 from pelican.utils import pelican_open
 
 JS_LIBRARIES = [
-    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core.js',
-    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64.js',
-    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/cipher-core.js',
-    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/pad-nopadding.js',
-    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/md5.js',
-    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes.js'
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/cipher-core.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/pad-nopadding.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/md5.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes.js'
 ]
 
 PLUGIN_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -44,7 +44,7 @@ def hash_md5(text):
     """
     key = hashlib.md5()
     key.update(text.encode('utf-8'))
-    return key.digest()
+    return key
 
 
 def encrypt_text_aes(text, password):
@@ -57,7 +57,7 @@ def encrypt_text_aes(text, password):
     iv = Random.new().read(16)
     
     # key must be 32 bytes for AES-256, so the password is hashed with md5 first
-    cipher = AES.new(hash_md5(password), AES.MODE_CBC, iv)
+    cipher = AES.new(hash_md5(password).digest(), AES.MODE_CBC, iv)
 
     plaintext = text.encode('utf-8')
     
