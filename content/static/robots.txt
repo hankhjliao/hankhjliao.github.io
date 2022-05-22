@@ -1,8 +1,8 @@
 User-agent: *
 Disallow: /author/
 Disallow: /category/
+Disallow: /posts/draft/
 Disallow: /tag/
-Disallow: /drafts/
 Disallow: /theme/
 
 Sitemap: https://hankliao87.github.io/blog/sitemap.xml
