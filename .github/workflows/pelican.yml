@@ -37,6 +37,7 @@ jobs:
         rm -rf .git
         # re-initialise git
         cd output
+        git config --global init.defaultBranch
         git init
         git config user.name "Hank Liao"
         git config user.email "hankliao87@gmail.com"
@@ -45,7 +46,7 @@ jobs:
         git add *
         git commit -m "Deploy"
         # push the commit to the public repository
-        git push origin HEAD:master --force
+        git push origin main --force
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.2.5
