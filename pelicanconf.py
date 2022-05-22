@@ -10,6 +10,8 @@ LOGO_IMG = 'https://github.com/identicons/hankliao87.png'
 THEME = 'theme'
 PATH = 'content'
 
+COPYRIGHT_YEAR = 2022
+
 MENUITEMS = (
     # ('Home', '/'),
     # ('About', '/about.html'),
