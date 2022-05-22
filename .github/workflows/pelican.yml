@@ -40,18 +40,10 @@ jobs:
         git init
         git config user.name "Hank Liao"
         git config user.email "hankliao87@gmail.com"
-        git remote add origin https://hankliao87:${{secrets.GH_PAT}}@github.com/hankliao87/blog-test.git
+        git remote add origin https://hankliao87:${{secrets.GITHUB_TOKEN}}@github.com/hankliao87/blog-test.git
         # add and commit /docs/ folder
         git checkout -b gh-pages
         git add --all
         git commit -m "Deploy"
         # push the commit to the public repository
         git push origin gh-pages --force
-
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4.2.5
-      with:
-        branch: gh-pages # the branch the action should deploy to.
-        folder: output # the folder the action should deploy.
-        # token: ${{ secrets.GH_PAT }}
-        single-commit: true
