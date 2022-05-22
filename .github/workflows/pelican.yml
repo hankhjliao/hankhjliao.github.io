@@ -41,7 +41,7 @@ jobs:
         git init
         git config user.name "Hank Liao"
         git config user.email "hankliao87@gmail.com"
-        git remote set-url origin https://hankliao87:${secrets.GITHUB_TOKEN}@github.com/hankliao87/blog-test.git
+        git remote set-url origin git@github.com:hankliao87/blog-test.git
         # add and commit /docs/ folder
         git add *
         git commit -m "Deploy"
