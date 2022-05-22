@@ -35,6 +35,7 @@ EXTRA_PATH_METADATA = {}
 
 # static paths will be copied without parsing their contents
 STATIC_PATHS = ['images', 'static']
+EXTRA_PATH_METADATA = {'static/robots.txt': {'path': 'robots.txt'},}
 
 DIRECT_TEMPLATES = ['index', 'tags',
                     'categories', 'authors', 'archives', 'search']
