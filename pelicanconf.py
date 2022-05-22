@@ -35,7 +35,7 @@ EXTRA_PATH_METADATA = {}
 
 # static paths will be copied without parsing their contents
 STATIC_PATHS = ['images', 'static']
-EXTRA_PATH_METADATA = {'static/robots.txt': {'path': 'robots.txt'},}
+EXTRA_PATH_METADATA = {'static/robots.txt': {'path': 'robots.txt'}, }
 
 DIRECT_TEMPLATES = ['index', 'tags',
                     'categories', 'authors', 'archives', 'search']
@@ -94,8 +94,8 @@ SOCIAL = ()
 ################################
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ["render_math", "tag_cloud", "better_codeblock_line_numbering",
-           "pelican-encrypt-content", "tipue_search", "pelican-toc", "readtime", "sitemap"]
+PLUGINS = ["render_math", "better_codeblock_line_numbering",
+           "pelican-encrypt-content", "tipue_search", "readtime", "sitemap"]
 
 MARKDOWN = {
     'extensions': [
@@ -103,6 +103,8 @@ MARKDOWN = {
         'markdown.extensions.codehilite',
         'markdown.extensions.extra',
         'markdown.extensions.nl2br',
+        #'markdown.extensions.smarty',
+        'markdown.extensions.toc',
         'mdx_include',
         'pymdownx.emoji',
         'pymdownx.inlinehilite',
@@ -113,6 +115,7 @@ MARKDOWN = {
     ],
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': 'False'},
+        'markdown.extensions.toc': {'permalink': 'True', 'permalink_class': 'text-decoration-none text-info text-opacity-25'},
         "pymdownx.emoji": {"options": {"attributes": {"align": "absmiddle", "height": "20px", "width": "20px"}, }},
     },
 }

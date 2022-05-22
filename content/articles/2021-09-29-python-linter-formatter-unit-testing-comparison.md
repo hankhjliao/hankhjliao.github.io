@@ -7,6 +7,8 @@ Slug: 2021-09-29-python-linter-formatter-unit-testing-comparison
 Summary: Python linters, formatters, and unit testing comparison
 ---
 
+[TOC]
+
 ## Linters
 
 |                    | Flake8             | Pylint             |

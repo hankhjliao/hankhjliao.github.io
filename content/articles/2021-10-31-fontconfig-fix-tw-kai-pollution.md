@@ -7,6 +7,8 @@ Slug: 2021-10-31-fontconfig-fix-tw-kai-pollution
 Summary: For the sake of displaying most of the CJK characters in Linux, you might get the solution of installing `TW-Kai` and `TW-Sung` fonts after googling.
 ---
 
+[TOC]
+
 ## Problem
 
 <div class="text-center">
