@@ -25,7 +25,9 @@ DATE_FORMATS = {
     'en': ('%Y/%m/%d'),
 }
 
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.loopcontrols']}
+JINJA_ENVIRONMENT = {
+    'extensions': ['jinja2.ext.loopcontrols']
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -36,8 +38,9 @@ EXTRA_PATH_METADATA = {}
 # static paths will be copied without parsing their contents
 STATIC_PATHS = ['images', 'static']
 EXTRA_PATH_METADATA = {
-    'static/robots.txt': {'path': 'robots.txt'},
+    'static/favicon.ico': {'path': 'favicon.ico'},
     'static/googlec6d34602096e89b2.html': {'path': 'googlec6d34602096e89b2.html'},
+    'static/robots.txt': {'path': 'robots.txt'},
 }
 
 DIRECT_TEMPLATES = ['index', 'tags',
@@ -98,7 +101,7 @@ SOCIAL = ()
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ["render_math", "better_codeblock_line_numbering",
-           "pelican-encrypt-content", "tipue_search", "readtime", "sitemap"]
+           "tipue_search", "readtime", "sitemap"]
 
 MARKDOWN = {
     'extensions': [
