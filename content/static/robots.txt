@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /author/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /drafts/
+Disallow: /theme/
+
+Sitemap: https://hankliao87.github.io/sitemap.xml
