@@ -1,14 +1,4 @@
 $(function () {
-    $('table').each(function () {
-        $(this).addClass('table table-sm table-hover');
-        $(this).wrap('<div class="table-responsive"></div>');
-    });
-    $('.footnote').each(function () {
-        $(this).addClass('text-break');
-    });
-    $('a').each(function () {
-        $(this).addClass('text-break');
-    });
     Footnotes.setup();
 });
 
@@ -46,7 +36,7 @@ var Footnotes = {
             width:'400px',
             background:'white',
         });
-        div.addClass('border border-dark rounded p-1');
+        div.addClass('border border-dark rounded p-1 text-break');
         $(document.body).append(div);
 
         var left = position.left;

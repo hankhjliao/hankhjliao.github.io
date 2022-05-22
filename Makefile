@@ -68,7 +68,7 @@ else
 endif
 
 
-devserver:
+devserver: clean
 ifdef PORT
 	@echo 'Serve site at http://localhost:$(PORT)'
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)

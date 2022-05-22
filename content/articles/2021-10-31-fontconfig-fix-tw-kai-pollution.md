@@ -11,12 +11,7 @@ Summary: For the sake of displaying most of the CJK characters in Linux, you mig
 
 ## Problem
 
-<div class="text-center">
-  <figure class="figure">
-    <img src="{attach}/images/fontconfig-fix-tw-kai-pollution-1.png" class="figure-img img-fluid rounded" alt="TW-Kai pollutes the monospace font in the gnome terminal.">
-    <figcaption class="figure-caption text-center">TW-Kai pollutes the monospace font in the gnome terminal.</figcaption>
-  </figure>
-</div>
+![TW-Kai pollutes the monospace font in the gnome terminal.]({attach}/images/fontconfig-fix-tw-kai-pollution-1.png)
 
 For the sake of displaying most of the CJK characters in Linux, you might get the solution of installing `TW-Kai` and `TW-Sung` fonts after googling.
 However, some applications may look strange after installing them.

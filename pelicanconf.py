@@ -100,8 +100,17 @@ SOCIAL = ()
 ################################
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ["render_math", "better_codeblock_line_numbering",
-           "tipue_search", "readtime", "sitemap"]
+PLUGINS = [
+    "better_codeblock_line_numbering",
+    "better_figures",
+    "better_tables",
+    "pelican-cjk",
+    "pelican-encrypt-content",
+    "readtime",
+    "render_math", 
+    "sitemap",
+    "tipue_search",
+]
 
 MARKDOWN = {
     'extensions': [

@@ -27,6 +27,11 @@ body {
     display: block;
 }
 
+blockquote {
+    padding-left: 0.625rem;
+    border-left: 0.375rem solid #ccc;
+}
+
 /* For use with the code_line-number_word-wrap_switcher_jquery.js Pelican plugin */
 code {
     overflow: auto;
@@ -43,7 +48,6 @@ code {
     color: #ccc !important;
     background-color: var(--bs-dark-gray-200) !important;
 }
-
 
 /* Following http://bililite.com/blog/2012/08/05/line-numbering-in-pre-elements/, use CSS to add line numbers to all spans that have the class 'code-line' */
 .highlight pre {
@@ -63,7 +67,7 @@ code {
     color: grey;
     text-align: right;
 }
-.highlight > pre > code {
+.highlight > pre > span > code, .highlight > pre > code {
     background-color: transparent !important;
 }
 [data-theme='dark'] .highlight pre span.code-line:before {
