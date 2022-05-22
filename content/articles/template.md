@@ -7,6 +7,7 @@ Slug: template
 Summary: Summary of template
 Lang: en
 Status: draft
+Password: mydraft
 ---
 
 [TOC]
