@@ -25,7 +25,7 @@
                             {% endif %} -->
                             {% if article.readtime %}- {{article.readtime.minutes}} min{% endif %}
                         </div>
-                        <p class="card-text">{{ article.summary }}</p>
+                        <p class="card-text">{{ article.summary | striptags }}</p>
                         <div class="row">
                             <div class="col-9">
                                 {% if article.tags %}
