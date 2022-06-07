@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Hung-Ju Liao'
-SITENAME = u'HJ\'s Blog'
+SITENAME = u'HJLog'
 # SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
 LOGO_IMG = 'https://github.com/identicons/hankliao87.png'
