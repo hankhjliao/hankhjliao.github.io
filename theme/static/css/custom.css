@@ -133,3 +133,10 @@ code {
     background-color: var(--bs-dark-light) !important;
     border: solid 1px;
 }
+
+.card:hover, .card:focus {
+    transform: scale(0.99, 0.99);
+}
+.card:active {
+    transform: scale(0.97, 0.97);
+}

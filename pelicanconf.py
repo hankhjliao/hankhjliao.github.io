@@ -68,7 +68,7 @@ DRAFT_SAVE_AS = 'posts/draft/{slug}/index.html'
 
 #UTTERANC_REPO_NAME = 'hankliao87/blog'
 GISCUS_REPO_NAME = 'hankliao87/blog'
-GISCUS_REPO_ID = 'MDEwOlJlcG9zaXRvcnkyMjI3Njc0OTU'
+GISCUS_REPO_ID = 'MDEwOlJlcG9zaXRvcnkyMjI3Njc0OTU='
 GISCUS_CATEGORY_ID = 'DIC_kwDODUcph84CAJSe'
 
 ################################
@@ -106,8 +106,8 @@ PLUGINS = [
     "better_codeblock_line_numbering",
     "better_figures",
     "better_tables",
-    "pelican-cjk",
     "encrypt_content",
+    "pelican-cjk",
     "readtime",
     "render_math", 
     "sitemap",

@@ -5,6 +5,7 @@
     {% block head %}
 
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <link rel="icon" href="{{ SITEURL }}/favicon.ico">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -240,6 +241,7 @@
                 }
             };
             iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            $( ".giscus-frame" )[0].contents().find( "body" ).css( "background-color", "#BADA55" );
         };
         $("#theme-toggle").click(() => {
             var targetTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";

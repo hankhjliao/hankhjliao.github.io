@@ -9,15 +9,15 @@
             {% endblock %}
             <div class="row">
                 {% for article in articles_page.object_list %}
-                <div class="card w-100 my-2 px-0">
+                <div class="card w-100 my-2 px-0 shadow-sm">
                     <div class="card-body">
                         <div class="card-title">
                             <a class="fs-4 fw-bold text-body text-decoration-none stretched-link"
                                 href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                                 title="{{ article.title|striptags }}">{{ article.title }}</a>
                         </div>
-                        <div class="text-secondary card-subtitle">
-                            {{ article.locale_date }}
+                        <div class="text-secondary card-subtitle fs-6">
+                            {{ article.date.strftime("%Y/%m/%d") }}
                             <!-- {% if article.authors %} -
                             {% for author in article.authors|sort %}
                             <a class="text-secondary text-decoration-none" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
