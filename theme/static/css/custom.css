@@ -140,3 +140,18 @@ code {
 .card:active {
     transform: scale(0.97, 0.97);
 }
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bs-gray-600);
+  border: 5px solid var(--bs-light);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bs-gray-700);
+}
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  border: 5px solid var(--bs-dark-light);
+}
