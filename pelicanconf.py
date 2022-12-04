@@ -56,6 +56,8 @@ ARTICLE_EXCLUDES = []
 ARTICLE_URL = 'posts/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
 ARTICLE_ORDER_BY = 'reversed-date'
+ARTICLE_LANG_URL = 'posts/{lang}/{slug}/'
+ARTICLE_LANG_SAVE_AS = 'posts/{lang}/{slug}/index.html'
 
 DISPLAY_PAGES_ON_MENU = False
 PAGE_PATHS = ['pages']

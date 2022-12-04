@@ -9,7 +9,7 @@
                 <div class="fs-1">{{ article.title }}</div>
                 {% import 'translations.html' as translations with context %}
                 {{ translations.translations_for(article) }}
-                <div class="text-muted mb-3">
+                <div class="text-muted mb-3 fs-6">
                     {{ article.locale_date }}
                     <!-- {% if article.authors %} -
                         {% for author in article.authors|sort %}
