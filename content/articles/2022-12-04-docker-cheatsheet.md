@@ -20,7 +20,7 @@ Container: Where you run programs.
 
 - docker (container) run
 <br>
-- docker container ls -> docker ps
+- docker container ls → docker ps
 - docker (container) start/stop/restart/kill/rm `<container ID>`
 <br>
 - docker (container) attach `<container ID>`
@@ -61,8 +61,8 @@ OPTION:
 
 - docker (image) build -t `<image tag>` .
 <br>
-- docker image ls -> docker images
-- docker image rm `<image ID>` -> docker rmi
+- docker image ls → docker images
+- docker image rm `<image ID>` → docker rmi
 <br>
 - docker (image) pull/push `<image ID>`
 - docker (image) history `<image ID>`
