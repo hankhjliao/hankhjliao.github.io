@@ -25,9 +25,9 @@
                     {{ article.content }}
                 </div>
                 <div class="admonition">
-                    <p>Post author: {{ article.author }}</p>
-                    <p>Post link: <a href="{{ SITEURL }}/{{ article.url }}">{{ SITEURL }}/{{ article.url }}</a> </p>
-                    <p>Copyright Notice: All articles in this blog are licensed under <a class="text-decoration-none text-black-50" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+                    <p>Author: {{ article.author }}</p>
+                    <p>Link: <a href="{{ SITEURL }}/{{ article.url }}">{{ SITEURL }}/{{ article.url }}</a> </p>
+                    <p>Copyright: All articles in this blog are licensed under <a class="text-decoration-none text-black-50" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0</a>.</p>
                 </div>
                 <div class="pt-3">
                     {% if article.tags %}
