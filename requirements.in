@@ -3,3 +3,4 @@ mdx_include
 pelican
 pycryptodome
 pymdown-extensions
+gitpython
