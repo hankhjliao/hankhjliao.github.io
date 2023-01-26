@@ -10,7 +10,7 @@ LOGO_IMG = 'https://github.com/identicons/hankliao87.png'
 THEME = 'theme'
 PATH = 'content'
 
-COPYRIGHT_YEAR = 2022
+COPYRIGHT_YEAR = 2023
 
 MENUITEMS = (
     # ('Home', '/'),
@@ -109,6 +109,7 @@ PLUGINS = [
     "better_figures",
     "better_tables",
     "encrypt_content",
+    "filetime_from_git",
     "pelican-cjk",
     "readtime",
     "render_math", 
@@ -134,7 +135,7 @@ MARKDOWN = {
     ],
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': 'False'},
-        'markdown.extensions.toc': {'permalink': 'True', 'permalink_class': 'text-decoration-none text-info text-opacity-25'},
+        'markdown.extensions.toc': {'anchorlink': 'True', 'anchorlink_class': 'text-decoration-none text-dark anchorlink'},
         "pymdownx.emoji": {"options": {"classes" : "gemoji", "attributes": {"align": "absmiddle", "height": "20px", "width": "20px"}, }},
     },
 }
