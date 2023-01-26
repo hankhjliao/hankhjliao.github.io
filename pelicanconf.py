@@ -135,7 +135,7 @@ MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': 'False'},
         'markdown.extensions.toc': {'permalink': 'True', 'permalink_class': 'text-decoration-none text-info text-opacity-25'},
-        "pymdownx.emoji": {"options": {"attributes": {"align": "absmiddle", "height": "20px", "width": "20px"}, }},
+        "pymdownx.emoji": {"options": {"classes" : "gemoji", "attributes": {"align": "absmiddle", "height": "20px", "width": "20px"}, }},
     },
 }
 

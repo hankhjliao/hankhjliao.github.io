@@ -9,6 +9,7 @@ def better_figures(content):
 
     for image in soup.findAll('img'):
         if image.parent.name == 'figure': continue
+        if 'gemoji' in image.get('class', []): continue
 
         image['class'] = image.get('class', []) + ['figure-img', 'img-fluid', 'rounded']
 
