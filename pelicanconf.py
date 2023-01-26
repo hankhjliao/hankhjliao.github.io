@@ -109,7 +109,7 @@ PLUGINS = [
     "better_figures",
     "better_tables",
     "encrypt_content",
-    "filetime_from_git",
+    # "filetime_from_git",
     "pelican-cjk",
     "readtime",
     "render_math", 

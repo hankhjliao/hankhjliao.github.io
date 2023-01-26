@@ -10,10 +10,10 @@
                 {% import 'translations.html' as translations with context %}
                 {{ translations.translations_for(article) }}
                 {% set article_date = article.date | strftime('%Y/%m/%d') %}
-                {% set article_modified = article.modified | strftime('%Y/%m/%d') %}
+                {# {% set article_modified = article.modified | strftime('%Y/%m/%d') %} #}
                 <div class="text-muted mb-3 fs-6">
                     {{ article_date }}
-                    {% if article_date != article_modified %}- Updated: {{ article_modified }} {% endif %}
+                    {# {% if article_date != article_modified %}- Updated: {{ article_modified }} {% endif %} #}
                     <!-- {% if article.authors %} -
                         {% for author in article.authors|sort %}
                         <a class="text-muted text-decoration-none" href="{{ SITEURL }}/{{ author.url }}"> {{ author }}</a>
