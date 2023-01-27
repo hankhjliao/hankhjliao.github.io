@@ -6,7 +6,7 @@ AUTHOR = 'Hung-Ju Liao'
 SITENAME = u'HJLog'
 # SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
-LOGO_IMG = 'https://github.com/identicons/hankliao87.png'
+LOGO_IMG = 'https://github.com/identicons/hankhjliao.png'
 THEME = 'theme'
 PATH = 'content'
 
@@ -68,8 +68,8 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 DRAFT_URL = 'posts/draft/{slug}/'
 DRAFT_SAVE_AS = 'posts/draft/{slug}/index.html'
 
-#UTTERANC_REPO_NAME = 'hankliao87/blog'
-GISCUS_REPO_NAME = 'hankliao87/blog'
+#UTTERANC_REPO_NAME = 'hankhjliao/blog'
+GISCUS_REPO_NAME = 'hankhjliao/blog'
 GISCUS_REPO_ID = 'MDEwOlJlcG9zaXRvcnkyMjI3Njc0OTU='
 GISCUS_CATEGORY_ID = 'DIC_kwDODUcph84CAJSe'
 
@@ -88,9 +88,9 @@ AUTHOR_FEED_RSS = None
 # Links
 ################################
 
-HOME_URL = 'https://hankliao87.github.io/'
-GITHUB_URL = 'https://github.com/hankliao87/'
-TWITTER_URL = 'https://twitter.com/hankliao87/'
+HOME_URL = 'https://hankhjliao.github.io/'
+GITHUB_URL = 'https://github.com/hankhjliao/'
+TWITTER_URL = 'https://twitter.com/hankhjliao/'
 # FACEBOOK_URL = '/'
 
 # Blogroll

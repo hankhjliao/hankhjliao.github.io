@@ -5,4 +5,4 @@ Disallow: /posts/draft/
 Disallow: /tag/
 Disallow: /theme/
 
-Sitemap: https://hankliao87.github.io/blog/sitemap.xml
+Sitemap: https://hankhjliao.github.io/blog/sitemap.xml

@@ -166,7 +166,7 @@ TVM. You can compile the Android program first to know what each functions
 does, or you can modified the files according to
 `README.md <https://github.com/apache/incubator-tvm/blob/master/apps/android_deploy/README.md>`_
 
-Moreover, `here <https://github.com/hankliao87/deploy-style-transfer-on-android>`_
+Moreover, `here <https://github.com/hankhjliao/deploy-style-transfer-on-android>`_
 is an Android program that I deployed the style transfer models which were
 trained by `Tony Tseng <https://github.com/Tony-Tseng>`_.
 

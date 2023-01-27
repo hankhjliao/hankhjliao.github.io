@@ -37,8 +37,8 @@ jobs:
         cd output
         git init
         git config user.name "Hank Liao"
-        git config user.email "hankliao87@gmail.com"
-        git remote add origin https://hankliao87:${{secrets.GH_PAT}}@github.com/hankliao87/blog.git
+        git config user.email "hankhjliao@gmail.com"
+        git remote add origin https://hankhjliao:${{secrets.GH_PAT}}@github.com/hankhjliao/blog.git
         git checkout -b gh-pages
         git add --all
         git commit -m "Deploy"
