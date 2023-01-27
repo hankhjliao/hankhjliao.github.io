@@ -24,9 +24,9 @@
                 <div class="text-break">
                     {{ article.content }}
                 </div>
-                <div class="admonition">
+                <div class="admonition fs-6">
+                    <p>{{ article.title }} <br> <a class="text-decoration-none text-black-50" href="{{ SITEURL }}/{{ article.url }}">{{ SITEURL }}/{{ article.url }}</a> </p>
                     <p>Author: {{ article.author }}</p>
-                    <p>Link: <a href="{{ SITEURL }}/{{ article.url }}">{{ SITEURL }}/{{ article.url }}</a> </p>
                     <p>Copyright: All articles in this blog are licensed under <a class="text-decoration-none text-black-50" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0</a>.</p>
                 </div>
                 <div class="pt-3">
