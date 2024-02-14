@@ -1,16 +1,14 @@
 ---
 Title: Docker Cheatsheet
-Date: 2022-12-04 14:20
-Category: Cheatsheet
+Date: 2022-12-04T14:20:00
+Categories: Cheatsheet
 Tags: docker
 Slug: docker-cheatsheet
 ---
 
-[TOC]
-
 ## Terminology
 
-![Docker overview (Image from https://docs.docker.com/get-started/overview/)]({attach}/images/docker-overview.png)
+{{< figure src="docker-overview.png" caption="Docker overview (Image from https://docs.docker.com/get-started/overview/)" >}}
 
 Registry: Where you download others’ image.
 Image: Read Only. Like Snapshot in Virtual Machine.
@@ -51,7 +49,7 @@ OPTION:
 
 ### Docker storages
 
-![Docker storage. (Image from https://docs.docker.com/storage/)]({attach}/images/docker-storages.png)
+{{< figure src="docker-storages.png" caption="Docker storage. (Image from https://docs.docker.com/storage/)" >}}
 
 1. Volume is managed by Docker. (Default: /var/lib/docker/volumes/ on Linux)
 2. When the container stops, the tmpfs mount is removed, and files written there won’t be persisted.

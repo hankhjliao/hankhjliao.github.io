@@ -1,0 +1,90 @@
+baseURL = "https://hankhjliao.github.io/"
+languageCode = 'en-us'
+title = 'HJLog'
+theme = 'hugo-coder'
+
+paginate = 20
+
+[markup.highlight]
+style = "github-dark"
+
+
+[params]
+  author = "Hung-Ju Liao"
+  info = "Engineer"
+  description = ""
+  keywords = ""
+  avatarurl = "images/avatar_512.jpg"
+
+  faviconSVG = "/favicon.ico"
+  favicon_32 = "/favicon.ico"
+  favicon_16 = "/favicon.ico"
+
+  since = 2017
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+[params.giscus] # https://giscus.app
+  repo = "hankhjliao/blog"
+  repoID = "MDEwOlJlcG9zaXRvcnkyMjI3Njc0OTU="
+  category = "Announcements"
+  categoryID = "DIC_kwDODUcph84CAJSe"
+  mapping = "title"
+  term = ""
+  strict = ""
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = ""
+  lang = "en"
+  loading = "lazy"
+
+[params.umami]
+  siteID = "542a7980-0985-44a8-83ba-284fb9366e05"
+  scriptURL = "https://analytics.umami.is/script.js"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/hankhjliao/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-twitter fa-2x"
+  weight = 2
+  url = "https://twitter.com/hankhjliao/"
+[[params.social]]
+  name = "Mastodon"
+  icon = "fa-brands fa-mastodon fa-2x"
+  weight = 3
+  url = "https://mastodon.social/@hankhjliao"
+[[params.social]]
+  name = "Email"
+  icon = "fa-solid fa-envelope fa-2x"
+  weight = 4
+  url = "mailto:hankhjliao"
+
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "blog/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"

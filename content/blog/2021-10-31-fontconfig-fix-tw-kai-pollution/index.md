@@ -1,17 +1,15 @@
 ---
-Title: [Fontconfig] Fix TW-Kai Pollution
-Date: 2021-10-31 19:20
-Category: Tutorial
+Title: "[Fontconfig] Fix TW-Kai Pollution"
+Date: 2021-10-31T19:20:00
+Categories: Tutorial
 Tags: tutorial
 Slug: 2021-10-31-fontconfig-fix-tw-kai-pollution
 Summary: For the sake of displaying most of the CJK characters in Linux, you might get the solution of installing `TW-Kai` and `TW-Sung` fonts after googling.
 ---
 
-[TOC]
-
 ## Problem
 
-![TW-Kai pollutes the monospace font in the gnome terminal.]({attach}/images/fontconfig-fix-tw-kai-pollution-1.png)
+{{< figure src="fontconfig-fix-tw-kai-pollution-1.png" caption="TW-Kai pollutes the monospace font in the gnome terminal." >}}
 
 For the sake of displaying most of the CJK characters in Linux, you might get the solution of installing `TW-Kai` and `TW-Sung` fonts after googling.
 However, some applications may look strange after installing them.
@@ -152,10 +150,11 @@ After editing the fonts.conf, you need to run `$ fc-cache -f` to rebuild the fon
 
 You can check the order by `$ fc-match -s serif`, `$ fc-match -s sans-serif`, and `$ fc-match -s monospace`.
 
-!!! note
-    `<alias>` is the shortcut to adjust the priority of the fallback fonts.
-    
-    In the end, the order will be like this: `<prefer> -> original -> <accept> -> <default>`
+{{<notice note>}}
+`<alias>` is the shortcut to adjust the priority of the fallback fonts.
+
+In the end, the order will be like this: `<prefer> -> original -> <accept> -> <default>`
+{{</notice>}}
 
 ## More Information
 

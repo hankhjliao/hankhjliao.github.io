@@ -1,0 +1,27 @@
+{{ $rows := .Inner | transform.Unmarshal }}
+
+{{ range $index, $row := $rows }}
+    {{ if eq $index 0}}
+        {{ continue }}
+    {{ end }}
+
+    {{ $title := index $row 0 }}
+    {{ $link := index $row 1 }}
+    {{ $time := index $row 2 }}
+    {{ $tags := index $row 3 }}
+    {{ $description := index $row 4 }}
+
+
+    <div class="notice note">
+        <div class="notice-title">
+            <a href="{{ $link }}" class="">{{ $title }}</a>
+        </div>
+        <div class="notice-content">
+            {{ $description }}
+            <hr>
+            <span class="date"><i class="fa-solid fa-calendar" aria-hidden="true"></i> {{ $time }}</span>
+            <span class="tags"><i class="fa-solid fa-tag" aria-hidden="true"></i> {{ $tags }}</span>
+        </div>
+    </div>
+
+{{ end }}

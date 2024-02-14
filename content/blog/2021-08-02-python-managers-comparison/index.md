@@ -1,16 +1,15 @@
 ---
 Title: Python Managers Comparison
-Date: 2021-08-02 11:20
-Category: Python
+Date: 2021-08-02T11:20:00
+Categories: Python
 Tags: python, comparison
 Slug: 2021-08-02-python-managers-comparison
 Summary: Python managers comparison
 ---
 
-[TOC]
-
-!!! note
-    For windows user / machine learning / newbie: Recommend to use conda + pip
+{{<notice note>}}
+For windows user / machine learning / newbie: Recommend to use conda + pip
+{{</notice>}}
 
 ## Manage python interpreter version
 
