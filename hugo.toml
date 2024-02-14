@@ -4,32 +4,48 @@ title = 'HJLog'
 theme = 'hugo-coder'
 
 paginate = 20
+enableEmoji = true
 
 [markup.highlight]
-style = "github-dark"
+  style = "github-dark"
 
 
 [params]
   author = "Hung-Ju Liao"
-  info = "Engineer"
-  description = ""
-  keywords = ""
+  license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+  description = "Hung-Ju Liao's personal website"
+  keywords = "blog,personal"
+  info = "Software Engineer"
   avatarurl = "images/avatar_512.jpg"
+  dateFormat = "January 2, 2006"
+  since = 2017
 
   faviconSVG = "/favicon.ico"
   favicon_32 = "/favicon.ico"
   favicon_16 = "/favicon.ico"
 
-  since = 2017
-
-  enableTwemoji = true
-
+  # Right To Left, shift content direction for languagues such as Arabic
+  rtl = false
+  # Specify light/dark colorscheme
+  # Supported values:
+  # "auto" (use preference set by browser)
+  # "dark" (dark background, light foreground)
+  # "light" (light background, dark foreground) (default)
   colorScheme = "auto"
-  hidecolorschemetoggle = false
+  # Hide the toggle button, along with the associated vertical divider
+  hideColorSchemeToggle = false
 
-  # customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
-  # customJS = ["js/custom.js"]
+  # Series see also post count
+  maxSeeAlsoItems = 5
+
+  # Custom CSS
+  customCSS = []
+  # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+  customSCSS = []
+  # Custom JS
+  customJS = []
+  # Custom remote JS files
+  customRemoteJS = []
 
 [taxonomies]
   category = "categories"
