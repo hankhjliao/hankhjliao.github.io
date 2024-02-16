@@ -44,7 +44,8 @@ table {
     padding: 1rem;
     max-width: 300px;
     overflow-wrap: break-word;
-    font-size: .75rem;
+    font-size: 12px;
+    font-size: max(.75rem, 12px);
     width: max-content;
     z-index: 9998;
 }
