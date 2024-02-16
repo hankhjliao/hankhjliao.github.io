@@ -39,7 +39,7 @@ enableEmoji = true
   maxSeeAlsoItems = 5
 
   # Custom CSS
-  customCSS = ["css/text.css", "css/toc.css"]
+  customCSS = ["css/text.css", "css/post-toc.css"]
   # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
   customSCSS = []
   # Custom JS
