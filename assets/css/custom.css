@@ -28,3 +28,30 @@ table {
     display: block;
     overflow-x: auto;
 }
+
+#footnote-div p {
+    margin: 0;
+}
+
+.footnote-hover {
+    border: 1px solid #e0e0e0;
+    background: #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 300px;
+    overflow-wrap: break-word;
+    font-size: .75rem;
+    width: max-content;
+}
+
+body.colorscheme-dark .footnote-hover {
+    border: 1px solid #424242;
+    background: #424242;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.colorscheme-auto .footnote-hover {
+        border: 1px solid #424242;
+        background: #424242;
+    }
+}

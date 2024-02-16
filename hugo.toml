@@ -43,7 +43,7 @@ enableEmoji = true
   # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
   customSCSS = []
   # Custom JS
-  customJS = []
+  customJS = ["js/jquery.min.js", "js/custom.js"]
   # Custom remote JS files
   customRemoteJS = []
 
