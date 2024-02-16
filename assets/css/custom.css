@@ -22,3 +22,8 @@ body.colorscheme-dark .post-toc {
         background: #424242;
     }
 }
+
+table {
+    display: block;
+    overflow-x: auto;
+}
