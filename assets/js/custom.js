@@ -59,3 +59,32 @@ var Footnotes = {
         $('#footnote-div').stop();
     }
 }
+
+$('.post-content img').click(function () {
+    var src = $(this).attr('src');
+    var modal;
+
+    function removeModal() {
+        modal.remove();
+        $(document.body).off('keyup.modal-close');
+    }
+
+    modal = $('<div>').css({
+        background: 'rgba(0,0,0,.75) no-repeat center / 80% url(' + src + ')',
+        position: 'fixed',
+        zIndex: '9999',
+        top: '0',
+        left: '0',
+        right: '0',
+        bottom: '0',
+        cursor: 'zoom-out'
+    }).click(function () {
+        removeModal();
+    }).appendTo(document.body);
+
+    $(document.body).on('keyup.modal-close', function (e) {
+        if (e.key === 'Escape') {
+            removeModal();
+        }
+    });
+});
