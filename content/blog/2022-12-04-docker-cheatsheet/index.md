@@ -1,8 +1,8 @@
 ---
 Title: Docker Cheatsheet
 Date: 2022-12-04T14:20:00
-Categories: Cheatsheet
-Tags: docker
+# Categories: Cheatsheet
+Tags: [docker, cheatsheet]
 ---
 
 ## Terminology

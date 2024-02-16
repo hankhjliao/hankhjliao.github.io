@@ -1,8 +1,8 @@
 ---
 Title: Python Managers Comparison
 Date: 2021-08-02T11:20:00
-Categories: Python
-Tags: python, comparison
+# Categories: Python
+Tags: [python, comparison]
 Slug: 2021-08-02-python-managers-comparison
 Summary: Python managers comparison
 ---

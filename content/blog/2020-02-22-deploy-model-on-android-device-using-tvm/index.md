@@ -1,8 +1,8 @@
 ---
 Title: Deploy Model on Android Device using TVM
 Date: 2020-02-22T21:00:00
-Categories: Tutorial
-Tags: tutorial
+# Categories: Tutorial
+Tags: [android]
 Slug: 2020-02-22-deploy-model-on-android-device-using-tvm
 Summary: Build the TVM Docker container to ensure we has the same environment.
 ---
