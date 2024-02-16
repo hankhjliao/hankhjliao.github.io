@@ -3,16 +3,15 @@ Title: Docker Cheatsheet
 Date: 2022-12-04T14:20:00
 Categories: Cheatsheet
 Tags: docker
-Slug: docker-cheatsheet
 ---
 
 ## Terminology
 
 {{< figure src="docker-overview.png" caption="Docker overview (Image from https://docs.docker.com/get-started/overview/)" >}}
 
-Registry: Where you download others’ image.
-Image: Read Only. Like Snapshot in Virtual Machine.
-Container: Where you run programs.
+Registry: Where you download others’ image.  
+Image: Read Only. Like Snapshot in Virtual Machine.  
+Container: Where you run programs.  
 
 ## Command: Container
 
