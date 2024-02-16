@@ -8,14 +8,16 @@ var Footnotes = {
     setup: function () {
         var footnotelinks = $("a[class='footnote-ref']")
 
-        footnotelinks.unbind('mouseover', Footnotes.footnoteover);
-        footnotelinks.unbind('mouseout', Footnotes.footnoteoout);
+        footnotelinks.off('click', Footnotes.footnoteover);
+        footnotelinks.off('focusout', Footnotes.footnoteoout);
 
-        footnotelinks.bind('mouseover', Footnotes.footnoteover);
-        footnotelinks.bind('mouseout', Footnotes.footnoteoout);
+        footnotelinks.on('click', Footnotes.footnoteover);
+        footnotelinks.on('focusout', Footnotes.footnoteoout);
     },
 
-    footnoteover: function () {
+    footnoteover: function (event) {
+        event.preventDefault();
+
         clearTimeout(Footnotes.footnotetimeout);
 
         $('#footnote-div').stop();
@@ -27,8 +29,7 @@ var Footnotes = {
 
         var div = $(document.createElement('div'));
         div.attr('id', 'footnote-div');
-        div.bind('mouseover', Footnotes.divover);
-        div.bind('mouseout', Footnotes.footnoteoout);
+        div.on('focusout', Footnotes.footnoteoout);
         div.html($(el).html());
         div.find("a[class='footnote-backref']").remove();
         div.css({ position: 'absolute' });
@@ -36,11 +37,11 @@ var Footnotes = {
         $(document.body).append(div);
 
         var left = position.left;
-        if (left + 420 > $(window).width() + $(window).scrollLeft())
-            left = $(window).width() - 420 + $(window).scrollLeft();
+        if (left + div.width() + 25 > $(window).width() + $(window).scrollLeft())
+            left = $(window).width() - div.width() - 25 + $(window).scrollLeft();
         var top = position.top + 20;
         if (top + div.height() > $(window).height() + $(window).scrollTop())
-            top = position.top - div.height() - 15;
+            top = position.top - div.height() - 20;
 
         div.css({
             left: left,

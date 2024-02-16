@@ -46,6 +46,7 @@ table {
     overflow-wrap: break-word;
     font-size: .75rem;
     width: max-content;
+    z-index: 9998;
 }
 
 body.colorscheme-dark .footnote-hover {
