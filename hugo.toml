@@ -93,6 +93,11 @@ enableEmoji = true
   icon = "fa-solid fa-envelope fa-2x"
   weight = 4
   url = "mailto:hankhjliao@gmail.com"
+[[params.social]]
+  name = "RSS"
+  icon = "fa-solid fa-rss fa-2x"
+  weight = 5
+  url = "https://hankhjliao.github.io/blog/index.xml"
 
 
 # Menu links
