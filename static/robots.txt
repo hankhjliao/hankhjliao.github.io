@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /author/
-Disallow: /category/
-Disallow: /posts/draft/
-Disallow: /tag/
-Disallow: /theme/
-
-Sitemap: https://hankhjliao.github.io/blog/sitemap.xml
