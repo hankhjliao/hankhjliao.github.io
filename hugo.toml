@@ -12,7 +12,7 @@ enableEmoji = true
 
 [params]
   author = "Hung-Ju Liao"
-  license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+  license = '<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA-4.0</a>'
   description = "Hung-Ju Liao's personal website"
   keywords = "blog,personal"
   info = "Software Engineer"
