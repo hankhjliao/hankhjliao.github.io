@@ -35,6 +35,7 @@
         {{ if .Params.featuredImage }}
           <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
         {{ end }}
+        {{ .TableOfContents }}
         {{ .Content }}
       </div>
 
