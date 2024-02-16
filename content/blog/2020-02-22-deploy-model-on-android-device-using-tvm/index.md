@@ -9,8 +9,7 @@ Summary: Build the TVM Docker container to ensure we has the same environment.
 
 {{< figure src="deploy-model-on-android-device-using-tvm-result.png" caption="The schematic diagram of the result. The cat image is downloaded from [here](https://raw.githubusercontent.com/dmlc/mxnet.js/master/data/cat.png?raw=true)" >}}
 
-Build TVM Docker Container Environment
-======================================
+## Build TVM Docker Container Environment
 
 Build the TVM Docker container to ensure we has the same environment.
 
@@ -49,8 +48,7 @@ and tvm4j. And you are familiar with the hierarchy of the folder of the tvm.)
 
    `$ make jvminstall`
 
-Test the Model Running Well on TVM
-==================================
+## Test the Model Running Well on TVM
 
 1. Copy the onnx into the Docker container using
    [docker cp](https://docs.docker.com/engine/reference/commandline/cp/).
@@ -103,8 +101,7 @@ Test the Model Running Well on TVM
    print(output)
    ```
 
-Cross-compile the Model
-=======================
+## Cross-compile the Model
 
 Run the script below and you will get three files
 (``model.so``, ``model.json``, ``model.params``).
@@ -153,8 +150,7 @@ Run the script below and you will get three files
    ```
 
 
-Write the Android Program
-=========================
+## Write the Android Program
 
 In the folder ``tvm/apps/android_deploy``, you will see an example provided by
 TVM. You can compile the Android program first to know what each functions
@@ -165,8 +161,7 @@ Moreover, [here](https://github.com/hankhjliao/deploy-style-transfer-on-android)
 is an Android program that I deployed the style transfer models which were
 trained by [Tony Tseng](https://github.com/Tony-Tseng).
 
-Compile the Android Program
-===========================
+## Compile the Android Program
 
 1. Change directory to the root of the android program.
 
