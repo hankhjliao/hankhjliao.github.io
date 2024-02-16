@@ -33,6 +33,10 @@ table {
     overflow-wrap: break-word;
 }
 
+.content header {
+    margin-top: 0rem;
+}
+
 #footnote-div p {
     margin: 0;
 }
