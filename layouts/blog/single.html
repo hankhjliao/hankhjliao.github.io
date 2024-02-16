@@ -30,12 +30,18 @@
           {{ with .GetTerms "tags" }}{{ partial "taxonomy/tags.html" . }}{{ end }}
         </div>
       </header>
-
-      <div class="post-content">
-        {{ if .Params.featuredImage }}
+      {{ if .Params.featuredImage }}
+      <div>
           <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
-        {{ end }}
-        {{ .TableOfContents }}
+      </div>
+      {{ end }}
+      <div class="post-toc">
+        <details>
+            <summary>Table of Contents</summary>
+            {{ .TableOfContents }}
+        </details>
+      </div>
+      <div class="post-content">
         {{ .Content }}
       </div>
 
