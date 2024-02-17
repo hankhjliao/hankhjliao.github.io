@@ -17,7 +17,7 @@ enableEmoji = true
   keywords = "blog,personal"
   info = "Software Engineer"
   avatarurl = "images/avatar_512.jpg"
-  dateFormat = "January 2, 2006"
+  dateFormat = "Jan 02, 2006"
   since = 2017
 
   faviconSVG = "/favicon.ico"
