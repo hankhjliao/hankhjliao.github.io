@@ -5,7 +5,7 @@
     src: local(cursive), url(https://fonts.gstatic.com/s/tangerine/v17/Iurd6Y5j_oScZZow4VO5srNZi5FN.woff2) format('woff2');
     unicode-range: U+0000-00FF;
     font-display: swap;
-  }
+}
 
 .Tangerine{
     font-family: 'Tangerine', cursive;
