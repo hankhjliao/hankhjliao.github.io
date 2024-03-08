@@ -4,14 +4,14 @@ Date: 2020-02-22T21:00:00
 # Categories: Tutorial
 Tags: [android]
 Slug: 2020-02-22-deploy-model-on-android-device-using-tvm
-Summary: Build the TVM Docker container to ensure we has the same environment.
+Summary: Build the TVM Docker container to ensure we have the same environment.
 ---
 
 {{< figure src="deploy-model-on-android-device-using-tvm-result.png" caption="The schematic diagram of the result. The cat image is downloaded from [here](https://raw.githubusercontent.com/dmlc/mxnet.js/master/data/cat.png?raw=true)" >}}
 
 ## Build TVM Docker Container Environment
 
-Build the TVM Docker container to ensure we has the same environment.
+Build the TVM Docker container to ensure we have the same environment.
 
 (You can skip this section if you know how to install the
 [dependent package](https://github.com/apache/incubator-tvm/blob/master/docker/Dockerfile.demo_android)
@@ -153,8 +153,7 @@ Run the script below and you will get three files
 ## Write the Android Program
 
 In the folder ``tvm/apps/android_deploy``, you will see an example provided by
-TVM. You can compile the Android program first to know what each functions
-does, or you can modified the files according to
+TVM. You can compile the Android program first to know what each function does, or you can modify the files according to
 [README.md](https://github.com/apache/incubator-tvm/blob/master/apps/android_deploy/README.md)
 
 Moreover, [here](https://github.com/hankhjliao/deploy-style-transfer-on-android)
@@ -163,23 +162,23 @@ trained by [Tony Tseng](https://github.com/Tony-Tseng).
 
 ## Compile the Android Program
 
-1. Change directory to the root of the android program.
+1. Change the directory to the root of the Android program.
 
    `$ cd /usr/tvm/apps/android_deploy`
 
-2. Generate the apk file.
+2. Generate the APK file.
 
    `$ gradle clean build --no-daemon`
 
-3. Create the key which is used to sign apk if you don't have.
+3. Create the key that is used to sign APK if you don't have one.
 
    `$ bash ./dev_tools/gen_keystore.sh`
 
-4. Sign the apk file.
+4. Sign the APK file.
 
    `$ bash ./dev_tools/sign_apk.sh`
 
-5. The signed apk file will be
+5. The signed APK file will be
    ``./app/build/outputs/apk/release/tvmdemo-release.apk``
 
-6. Copy the apk file from the Docker container.
+6. Copy the APK file from the Docker container.

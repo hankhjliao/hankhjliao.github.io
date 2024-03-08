@@ -8,15 +8,15 @@ Summary: Python managers comparison
 ---
 
 {{<notice note>}}
-For windows user / machine learning / newbie: Recommend to use conda + pip
+For Windows user / machine learning / newbie: Recommend to use conda + pip
 {{</notice>}}
 
-## Manage python interpreter version
+## Manage Python interpreter version
 
 ### conda
 
 Installation: https://docs.conda.io/en/latest/miniconda.html
-Specify the python version when creating the environment: `conda create -n env python=3.8`
+Specify the Python version when creating the environment: `conda create -n env python=3.8`
 
 ### pyenv
 
@@ -30,7 +30,7 @@ Set the global version: `pyenv global 3.8.0`
 Set the local version: `pyenv local 3.8.0`
 List versions: ` pyenv versions`
 
-## Manage python virtual environment
+## Manage Python virtual environment
 
 ### Global
 
@@ -80,7 +80,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 ### pip
 
 1. Install packages from [PyPI](https://pypi.org/).
-2. Won't remove dependencies when removing explicitly install pacakge.
+2. Won't remove dependencies when removing explicitly installed packages.
    (Solution: `pip install python3-pip-autoremove`, `pip3-autoremove <pkg>`)
 3. Visualize dependencies in `requirements.txt`:
     1. `pip install pipdeptree`
@@ -95,7 +95,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 2. Can use pip/poetry inside conda env.
    (Set `poetry config settings.virtualenvs.create false` when using poetry inside conda env)
 3. Support nested env activation: `conda activate --stack <env>`
-4. For exporting pacakge which is explicitly installed with **conda**: `conda env export --from-history`
+4. For exporting packages which is explicitly installed with **conda**: `conda env export --from-history`
 
 ### pipenv
 

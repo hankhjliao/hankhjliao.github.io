@@ -9,7 +9,7 @@ Tags: [docker, cheatsheet]
 
 {{< figure src="docker-overview.png" caption="Docker overview (Image from https://docs.docker.com/get-started/overview/)" >}}
 
-Registry: Where you download others’ image.  
+Registry: Where you download others’ images.  
 Image: Read Only. Like Snapshot in Virtual Machine.  
 Container: Where you run programs.  
 
@@ -34,14 +34,14 @@ docker run [OPTION] <image tag> [COMMAND]
 OPTION:
 
 - `--name <name>`: name the container
-- `--gpus all`: passthrough the gpu (need nvidia-container-toolkit)
-- `--restart on-failure`: restart the container when it is failure
+- `--gpus all`: passthrough the GPU (need nvidia-container-toolkit)
+- `--restart on-failure`: restart the container when it is a failure
 - `-i`: interactive mode
 - `-t`: tty mode (usually with interactive mode)
 - `-d`: detach mode
 - `-p 8080:80`: port forwarding
 - `-e "<name>=<value>"`: set environment variable
-- `--rm`: remove container and volume when exit
+- `--rm`: remove container and volume when exiting
 <br>
 - `-v $(realpath .):/code`: bind mount
 - `-v [volume name:]/code`: volume
@@ -52,7 +52,7 @@ OPTION:
 
 1. Volume is managed by Docker. (Default: /var/lib/docker/volumes/ on Linux)
 2. When the container stops, the tmpfs mount is removed, and files written there won’t be persisted.
-3. tmpfs mount is only for linux.
+3. tmpfs mount is only for Linux.
 
 ## Command: Image
 
@@ -124,10 +124,10 @@ docker run --net=<value>
 value:
 
 - none: No network.
-- container: All the container share the same IP.
-- host: The IP is same as host. Security concerns.
+- container: All the containers share the same IP.
+- host: The IP is the same as the host. Security concerns.
 - bridge: (Default) Use the network card *docker0* to assign the IP to each container.
-- overlay: Communicate with containers on other host machine.
+- overlay: Communicate with containers on other host machines.
 
 ## More Information
 

@@ -4,12 +4,12 @@ Date: 2021-07-14T20:00:00
 # Categories: Tutorial
 Tags: [linux]
 Slug: 2021-07-14-fix-dark-text-on-dark-background-of-qt-apps-in-gnome-with-dark-theme
-Summary: When we change the theme of the QT apps to the dark varient, the text of the interference might be difficult to see on the dark background.
+Summary: When we change the theme of the QT apps to the dark variant, the text of the interference might be difficult to see on the dark background.
 ---
 
 ## Problem
 
-When we change the theme of the QT apps to the dark varient, the text of the interference might be difficult to see on the dark background.
+When we change the theme of the QT apps to the dark variant, the text of the interference might be difficult to see on the dark background.
 
 {{< figure src="fix-dark-text-in-dark-theme-using-qt-in-gnome-1.png" caption="Dark text on dark background (Goldendict)" >}}
 
@@ -24,7 +24,7 @@ When we change the theme of the QT apps to the dark varient, the text of the int
    export QT_STYLE_OVERRIDE=kvantum
    ```
 
-3. Select preferred dark theme in kvantum.
+3. Select the preferred dark theme in Kvantum.
 
    {{< figure src="fix-dark-text-in-dark-theme-using-qt-in-gnome-4.png" caption="Select preferred dark theme" >}}
 
@@ -33,7 +33,7 @@ When we change the theme of the QT apps to the dark varient, the text of the int
    {{< figure src="fix-dark-text-in-dark-theme-using-qt-in-gnome-3.png" caption="Change kvantum to kvantum-dark" >}}
 
 .. note::
-  Sometimes you will need to logout and login again to apply the new settings.
+  Sometimes you will need to log out and log in again to apply the new settings.
 
 ## Result
 
