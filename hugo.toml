@@ -2,9 +2,11 @@ baseURL = "https://hankhjliao.github.io/"
 languageCode = 'en-us'
 title = 'HJLog'
 theme = 'hugo-coder'
+timeZone = 'Asia/Taipei'
 
 paginate = 20
 enableEmoji = true
+enableGitInfo = true
 
 [markup.highlight]
   style = "github-dark"
