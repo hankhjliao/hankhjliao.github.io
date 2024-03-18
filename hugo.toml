@@ -11,6 +11,9 @@ enableGitInfo = true
 [markup.highlight]
   style = "github-dark"
 
+[markup.goldmark.extensions.typographer]
+  disable = true
+
 
 [params]
   author = "Hung-Ju Liao"
